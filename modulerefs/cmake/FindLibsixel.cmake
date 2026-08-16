@@ -1,0 +1,22 @@
+if (NOT LIBSIXEL_FOUND)
+    set(LIBSIXEL_INSTALL "${BB_TOP_DIR}/tmp/work/libsixel${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(LIBSIXEL_LIBRARY      "${LIBSIXEL_INSTALL}/lib/libsixel.so")
+    set(LIBSIXEL_LIBRARIES    "${LIBSIXEL_INSTALL}/lib/libsixel.so")
+    set(LIBSIXEL_SLIBRARIES   "${LIBSIXEL_INSTALL}/lib/libsixel.a")
+    set(LIBSIXEL_INCLUDE_DIR  "${LIBSIXEL_INSTALL}/include")
+    set(LIBSIXEL_INCLUDE_DIRS "${LIBSIXEL_INSTALL}/include")
+    set(LIBSIXEL_CFLAGS "-I${LIBSIXEL_INCLUDE_DIR}")
+    set(LIBPATH "-I${LIBSIXEL_INSTALL}/bin")
+    set(LIB_FOUND 1)
+    add_library(SIXEL::SIXEL SHARED IMPORTED)
+    set_target_properties(SIXEL::SIXEL PROPERTIES
+      IMPORTED_LOCATION   "${LIBSIXEL_LIBRARY}"
+      INCLUDE_DIRECTORIES "${LIBSIXEL_INCLUDE_DIR}"
+      )
+
+    message("LIBSIXEL_LIBRARY=${LIBSIXEL_LIBRARY}")
+    message("LIBSIXEL_INCLUDE_DIR=${LIBSIXEL_INCLUDE_DIR}")
+
+    include_directories("${LIBSIXEL_INCLUDE_DIR}")
+endif()

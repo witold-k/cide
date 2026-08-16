@@ -1,0 +1,27 @@
+if (NOT LIBWEBP_FOUND)
+    set(LIBWEBP_INSTALL_BASE "${BB_TOP_DIR}/tmp/work/libjpeg${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}")
+    set(LIBWEBP_INSTALL      "${LIBWEBP_INSTALL_BASE}/${CMAKE_INSTALL_PREFIX}")
+
+    set(LIBWEBP_LIBRARY      "${LIBWEBP_INSTALL}/lib/libwebp.a")
+    set(LIBWEBP_LIBRARIES    "${LIBWEBP_INSTALL}/lib/libwebp.a;${LIBWEBP_INSTALL}/lib/libwebp.a")
+    set(LIBWEBP_INCLUDE_DIR  "${LIBWEBP_INSTALL}/include")
+    set(LIBWEBP_INCLUDE_DIRS "${LIBWEBP_INSTALL}/include")
+    set(LIBWEBP_FOUND        1)
+
+    add_library(LIBWEBP::LIBWEBP SHARED IMPORTED)
+    set_target_properties(LIBWEBP::LIBWEBP PROPERTIES
+        IMPORTED_LOCATION   "${LIBWEBP_LIBRARY}"
+        INCLUDE_DIRECTORIES "${LIBWEBP_INCLUDE_DIR}"
+    )
+
+    add_library(WebP::webp UNKNOWN IMPORTED)
+    set_target_properties(WebP::webp PROPERTIES
+        IMPORTED_LOCATION "${LIBWEBP_LIBRARY}"
+        INTERFACE_INCLUDE_DIRECTORIES "${LIBWEBP_INCLUDE_DIR}"
+    )
+
+    message("LIBWEBP_LIBRARY=${LIBWEBP_LIBRARY}")
+    message("LIBWEBP_INCLUDE_DIR=${LIBWEBP_INCLUDE_DIR}")
+
+    include_directories("${LIBWEBP_INCLUDE_DIR}")
+endif()

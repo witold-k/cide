@@ -1,0 +1,153 @@
+diff --git a/src/options.c b/src/options.c
+index e35402f..25479ac 100644
+--- a/src/options.c
++++ b/src/options.c
+@@ -18,6 +18,7 @@ static const char *usage_str =
+     " -t, --tty=TTY            Specify file to use as TTY device (default /dev/tty)\n"
+     " -s, --show-scores        Show the scores of each match\n"
+     " -0, --read-null          Read input delimited by ASCII NUL characters\n"
++    " -x, --exec               Execute command instead of terminate fzy\n"
+     " -j, --workers NUM        Use NUM workers for searching. (default is # of CPUs)\n"
+     " -i, --show-info          Show selection info line\n"
+     " -h, --help     Display this help and exit\n"
+@@ -34,6 +35,7 @@ static struct option longopts[] = {{"show-matches", required_argument, NULL, 'e'
+ 				   {"prompt", required_argument, NULL, 'p'},
+ 				   {"show-scores", no_argument, NULL, 's'},
+ 				   {"read-null", no_argument, NULL, '0'},
++				   {"exec", required_argument, NULL, 'x'},
+ 				   {"version", no_argument, NULL, 'v'},
+ 				   {"benchmark", optional_argument, NULL, 'b'},
+ 				   {"workers", required_argument, NULL, 'j'},
+@@ -43,6 +45,7 @@ static struct option longopts[] = {{"show-matches", required_argument, NULL, 'e'
+ 
+ void options_init(options_t *options) {
+ 	/* set defaults */
++    memset(options, 0, sizeof(*options));
+ 	options->benchmark       = 0;
+ 	options->filter          = NULL;
+ 	options->init_search     = NULL;
+@@ -54,13 +57,14 @@ void options_init(options_t *options) {
+ 	options->workers         = DEFAULT_WORKERS;
+ 	options->input_delimiter = '\n';
+ 	options->show_info       = DEFAULT_SHOW_INFO;
++	options->exec_filename   = NULL;
+ }
+ 
+ void options_parse(options_t *options, int argc, char *argv[]) {
+ 	options_init(options);
+ 
+ 	int c;
+-	while ((c = getopt_long(argc, argv, "vhs0e:q:l:t:p:j:i", longopts, NULL)) != -1) {
++	while ((c = getopt_long(argc, argv, "vhs0e:q:l:t:p:j:ix:", longopts, NULL)) != -1) {
+ 		switch (c) {
+ 			case 'v':
+ 				printf("%s " VERSION " © 2014-2018 John Hawthorn\n", argv[0]);
+@@ -114,6 +118,9 @@ void options_parse(options_t *options, int argc, char *argv[]) {
+ 			case 'i':
+ 				options->show_info = 1;
+ 				break;
++			case 'x':
++				options->exec_filename = optarg;
++				break;
+ 			case 'h':
+ 			default:
+ 				usage(argv[0]);
+diff --git a/src/options.h b/src/options.h
+index 4be4cb6..796a193 100644
+--- a/src/options.h
++++ b/src/options.h
+@@ -7,6 +7,7 @@ typedef struct {
+ 	const char *init_search;
+ 	const char *tty_filename;
+ 	int show_scores;
++	const char * exec_filename;
+ 	unsigned int num_lines;
+ 	unsigned int scrolloff;
+ 	const char *prompt;
+diff --git a/src/tty_interface.c b/src/tty_interface.c
+index 343dde8..4568994 100644
+--- a/src/tty_interface.c
++++ b/src/tty_interface.c
+@@ -1,8 +1,9 @@
+ #include <ctype.h>
++#include <errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-
++#include <unistd.h>
+ #include "match.h"
+ #include "tty_interface.h"
+ #include "../config.h"
+@@ -131,14 +132,20 @@ static void update_state(tty_interface_t *state) {
+ 	}
+ }
+ 
++char g_command[65536];
+ static void action_emit(tty_interface_t *state) {
+-	update_state(state);
++        update_state(state);
++	options_t *options = state->options;
++	int doExec = 0 != options->exec_filename;
+ 
+-	/* Reset the tty as close as possible to the previous state */
+-	clear(state);
+ 
+-	/* ttyout should be flushed before outputting on stdout */
+-	tty_close(state->tty);
++	if (!doExec) {
++           /* Reset the tty as close as possible to the previous state */
++	       clear(state);
++
++           /* ttyout should be flushed before outputting on stdout */
++           tty_close(state->tty);
++	}
+ 
+ 	const char *selection = choices_get(state->choices, state->choices->selection);
+ 	if (selection) {
+@@ -149,7 +156,44 @@ static void action_emit(tty_interface_t *state) {
+ 		printf("%s\n", state->search);
+ 	}
+ 
+-	state->exit = EXIT_SUCCESS;
++    if (!doExec) {
++	    state->exit = EXIT_SUCCESS;
++    }
++    else {
++        char * linenum = strchr(selection, ':');
++
++        const char * args[4];
++        char * end = 0;
++        int len = strlen(selection);
++        if ((0 != linenum) && (linenum != (selection + len - 1))) {
++            (void)strtol(linenum + 1, &end, 10);
++            len = (int)(end - selection);
++            snprintf(
++                g_command, sizeof(g_command),
++                "%.*s",
++                len, selection
++            );
++        }
++        else {
++            snprintf(
++                g_command, sizeof(g_command),
++                "%.*s",
++                len, selection
++            );
++        }
++        g_command[len] = 0;
++        const char * shell = getenv("SHELL");
++        args[0] = shell;
++        args[1] = options->exec_filename;
++        args[2] = g_command;
++        args[3] = 0;
++        pid_t pid = fork();
++        if (0 == pid) {
++            if (execv(shell, (char**)args)) {
++                fprintf(stderr, "ERROR: %s %d:%s\n", options->exec_filename, errno, strerror(errno));
++            }
++        }
++    }
+ }
+ 
+ static void action_del_char(tty_interface_t *state) {

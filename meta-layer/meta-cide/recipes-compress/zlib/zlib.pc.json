@@ -1,0 +1,19 @@
+{
+    "meta": {
+        "Name": "zlib",
+        "Description": "zlib compression library",
+        "Version": "1.3.1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build": {
+        "Libs": "-L${libdir} -lz",
+        "Cflags": "-I${includedir}"
+    }
+}

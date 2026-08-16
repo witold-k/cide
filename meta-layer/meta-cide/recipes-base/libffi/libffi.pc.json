@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "libffi",
+        "Description": "Library supporting Foreign Function Interfaces",
+        "Version": "3.4.6"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "libdir64": "${PREFIX}/lib64",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -L${libdir64} -lffi",
+        "Cflags": "-I${includedir}"
+    }
+}
+

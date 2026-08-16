@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libcpptest",
+        "Description": "C++ test suite",
+        "Version": "2.0.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lcpptest",
+        "Cflags": "-I${includedir}"
+    }
+}
+

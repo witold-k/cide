@@ -1,0 +1,28 @@
+if (NOT READLINE_FOUND)
+    set(READLINE_INSTALL "${BB_TOP_DIR}/tmp/work/libreadline${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(READLINE_LIBRARY      "${READLINE_INSTALL}/lib/libreadline.so")
+    set(READLINE_LIBRARIES    "${READLINE_INSTALL}/lib/libreadline.so")
+    set(READLINE_INCLUDE_DIR  "${READLINE_INSTALL}/include")
+    set(READLINE_INCLUDE_DIRS "${READLINE_INSTALL}/include")
+    set(READLINE_CFLAGS "-I${READLINE_INCLUDE_DIR}")
+    set(READLINEPATH "-I${READLINE_INSTALL}/bin")
+    set(READLINE_FOUND 1)
+
+    add_library(readline SHARED IMPORTED)
+    set_target_properties(readline PROPERTIES
+      IMPORTED_LOCATION   "${READLINE_LIBRARY}"
+      INCLUDE_DIRECTORIES "${READLINE_INCLUDE_DIR}"
+      )
+
+    add_library(READLINE::READLINE SHARED IMPORTED)
+    set_target_properties(READLINE::READLINE PROPERTIES
+      IMPORTED_LOCATION   "${READLINE_LIBRARY}"
+      INCLUDE_DIRECTORIES "${READLINE_INCLUDE_DIR}"
+      )
+
+    message("READLINE_LIBRARY=${READLINE_LIBRARY}")
+    message("READLINE_INCLUDE_DIR=${READLINE_INCLUDE_DIR}")
+
+    include_directories("${READLINE_INCLUDE_DIR}")
+endif()

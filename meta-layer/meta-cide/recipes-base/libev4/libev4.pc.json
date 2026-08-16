@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libev4",
+        "Description": "libev4",
+        "Version": "1.0.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lev",
+        "Cflags": "-I${includedir}"
+    }
+}
+

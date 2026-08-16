@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "Hogweed",
+        "Description": "Nettle low-level cryptographic library (public-key algorithms)",
+        "URL": "http://www.lysator.liu.se/~nisse/nettle",
+        "Version": "3.10.1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib64",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lhogweed",
+        "Libs.private":  "-lgmp", 
+        "Cflags": "-I${includedir}"
+    }
+}
+

@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "Name": "p11-kit",
+        "Description": "Library and proxy module for properly loading and sharing PKCS#11 modules.",
+        "Version": "0.25.5"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "p11_module_configs": "${PREFIX}/share/p11-kit/modules",
+        "p11_module_path": "${PREFIX}/lib/pkcs11",
+        "proxy_module": "${PREFIX}/lib/p11-kit-proxy.so",
+        "p11_system_config_modules": "${PREFIX}/share/p11-kit/modules"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lp11-kit",
+        "Cflags": "-I${includedir}/p11-kit-1"
+    }
+}
+

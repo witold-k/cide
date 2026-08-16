@@ -1,0 +1,28 @@
+if (NOT MSGPACK_FOUND)
+    set(MSGPACK_INSTALL "${BB_TOP_DIR}/tmp/work/msgpack-c${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(MSGPACK_LIBRARY      "${MSGPACK_INSTALL}/lib/libmsgpack-c.so")
+    set(MSGPACK_LIBRARIES    "${MSGPACK_INSTALL}/lib/libmsgpack-c.so")
+    set(MSGPACK_INCLUDE_DIR  "${MSGPACK_INSTALL}/include")
+    set(MSGPACK_INCLUDE_DIRS "${MSGPACK_INSTALL}/include")
+    set(MSGPACK_CFLAGS "-I${MSGPACK_INCLUDE_DIR}")
+    set(MSGPACKPATH "-I${MSGPACK_INSTALL}/bin")
+    set(MSGPACK_FOUND 1)
+    add_library(msgpack SHARED IMPORTED)
+    set_target_properties(msgpack PROPERTIES
+      IMPORTED_LOCATION   "${MSGPACK_LIBRARY}"
+      INCLUDE_DIRECTORIES "${MSGPACK_INCLUDE_DIR}"
+      )
+
+    add_library(MSGPACK::MSGPACK SHARED IMPORTED)
+    set_target_properties(MSGPACK::MSGPACK PROPERTIES
+      IMPORTED_LOCATION   "${MSGPACK_LIBRARY}"
+      INCLUDE_DIRECTORIES "${MSGPACK_INCLUDE_DIR}"
+      )
+
+
+    message("MSGPACK_LIBRARY=${MSGPACK_LIBRARY}")
+    message("MSGPACK_INCLUDE_DIR=${MSGPACK_INCLUDE_DIR}")
+
+    include_directories("${MSGPACK_INCLUDE_DIR}")
+endif()

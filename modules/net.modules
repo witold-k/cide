@@ -1,0 +1,3 @@
+[
+{"dir": "curl", "url": "https://github.com/curl/curl.git", "tool": "git", "branch": "master", "commit": "3d6d93a6beb9eeaca98ce20eeed7f64ebb0c9297", "freeze": false, "sm": false}
+]

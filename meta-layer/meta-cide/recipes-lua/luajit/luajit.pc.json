@@ -1,0 +1,32 @@
+{
+    "meta": {
+        "Name": "LuaJIT",
+        "Description": "Just-in-time compiler for Lua",
+        "URL": "https://luajit.org",
+        "Version": "${version}"
+    },
+
+    "vars": {
+        "majver": "2",
+        "minver": "1",
+        "relver": "ROLLING",
+        "version": "${majver}.${minver}.${relver}",
+        "abiver": "5.1",
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${prefix}",
+        "bindir": "${prefix}/bin",
+        "libdir": "${prefix}/lib",
+        "multilib": "lib",
+        "libname": "luajit-${abiver}",
+        "includedir": "${prefix}/include/luajit-${majver}.${minver}",
+        "INSTALL_LMOD": "${prefix}/share/lua/${abiver}",
+        "INSTALL_CMOD": "${prefix}/${multilib}/lua/${abiver}"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -l${libname}",
+        "Libs.private": "-Wl,-E -lm -ldl",
+        "Cflags": "-I${includedir}"
+    }
+}
+

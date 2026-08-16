@@ -1,0 +1,19 @@
+{
+    "meta": {
+        "Name": "lpeg",
+        "Description": "LPEG",
+        "Version": "1.0.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${prefix}",
+        "bindir": "${prefix}/bin",
+        "libdir": "${prefix}/lib"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -llpeg"
+    }
+}
+

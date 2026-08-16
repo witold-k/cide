@@ -1,0 +1,26 @@
+if (NOT UTF8PROC_FOUND)
+    set(UTF8PROC_INSTALL "${BB_TOP_DIR}/tmp/work/utf8proc${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(UTF8PROC_LIBRARY      "${UTF8PROC_INSTALL}/lib/libutf8proc.a")
+    set(UTF8PROC_LIBRARIES    "${UTF8PROC_INSTALL}/lib/libutf8proc.a")
+    set(UTF8PROC_INCLUDE_DIR  "${UTF8PROC_INSTALL}/include")
+    set(UTF8PROC_INCLUDE_DIRS "${UTF8PROC_INSTALL}/include")
+    set(UTF8PROC_FOUND        1)
+
+    add_library(utf8proc SHARED IMPORTED)
+    set_target_properties(utf8proc PROPERTIES
+        IMPORTED_LOCATION   "${UTF8PROC_LIBRARY}"
+        INCLUDE_DIRECTORIES "${UTF8PROC_INCLUDE_DIR}"
+    )
+
+    add_library(UTF8PROC::UTF8PROC SHARED IMPORTED)
+    set_target_properties(UTF8PROC::UTF8PROC PROPERTIES
+        IMPORTED_LOCATION   "${UTF8PROC_LIBRARY}"
+        INCLUDE_DIRECTORIES "${UTF8PROC_INCLUDE_DIR}"
+    )
+
+    message("UTF8PROC_LIBRARY=${UTF8PROC_LIBRARY}")
+    message("UTF8PROC_INCLUDE_DIR=${UTF8PROC_INCLUDE_DIR}")
+
+    include_directories("${UTF8PROC_INCLUDE_DIR}")
+endif()

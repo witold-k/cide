@@ -1,0 +1,4 @@
+[
+{"dir": "alsa-lib", "url": "https://github.com/alsa-project/alsa-lib", "tool": "git", "branch": "master", "commit": "a48bbb2322fefc7eff9dca061517e935e98cb6a5", "freeze": false, "sm": false},
+{"dir": "openal-soft", "url": "https://github.com/kcat/openal-soft", "tool": "git", "branch": "master", "commit": "c157b87cb9eb58d747748e49f82ee4a64d1dcf8b", "freeze": false, "sm": false}
+]

@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "libharu",
+        "Description": "Pdf Creation Library (Hpdf)",
+        "Version": "1.6.45",
+        "Requires.private": "zlib"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lhpdf",
+        "Cflags": "-I${includedir}"
+    }
+}
+

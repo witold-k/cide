@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "GNU MP C++",
+        "Description": "GNU Multiple Precision Arithmetic Library (C++ bindings)",
+        "URL": "https://gmplib.org",
+        "Version": "6.2.1",
+        "Requires": "gmp"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lgmpxx",
+        "Cflags": "-I${includedir}"
+    }
+}
+

@@ -1,0 +1,16 @@
+[Unit]
+Description=ubus.service - Inter-process communication daemon.
+After=network.target
+Documentation=
+
+[Service]
+ExecStart=/opt/cide/native/sbin/ubusd
+RestartSec=1
+TimeoutStopSec=5
+
+ProtectSystem=full
+PrivateDevices=on
+NoNewPrivileges=on
+
+[Install]
+WantedBy=multi-user.target

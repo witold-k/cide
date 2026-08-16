@@ -1,0 +1,1 @@
+../../../../../../buildscripts/bitbake/classes/simplebazel.bbclass

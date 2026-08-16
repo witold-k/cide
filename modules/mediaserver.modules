@@ -1,0 +1,3 @@
+[
+{"dir": "minidlna", "url": "https://github.com/azatoth/minidlna.git", "tool": "git", "branch": "master", "commit": "eff77615abf6087c76647ed57b8878280a6cd215", "freeze": false, "sm": false}
+]

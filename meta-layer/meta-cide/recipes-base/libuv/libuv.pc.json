@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libuv",
+        "Version": "1.44.3",
+        "Description": "multi-platform support library with a focus on asynchronous I/O.",
+        "URL": "http://libuv.org/"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -luv -lpthread -ldl -lrt",
+        "Cflags": "-I${includedir}"
+    }
+}
+

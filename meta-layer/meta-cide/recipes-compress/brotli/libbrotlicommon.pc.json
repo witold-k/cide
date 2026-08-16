@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libbrotlicommon",
+        "URL": "https://github.com/google/brotli",
+        "Description": "Brotli common dictionary library",
+        "Version": "1.1.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lbrotlicommon",
+        "Cflags": "-I${includedir}"
+    }
+}
+

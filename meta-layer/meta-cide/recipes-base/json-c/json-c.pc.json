@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "json-c",
+        "Description": "A JSON implementation in C",
+        "Version": "0.18.99"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs.private": "-lm",
+        "Libs": "-L${libdir} -ljson-c",
+        "Cflags": "-I${includedir} -I${includedir}/json-c"
+    }
+}
+

@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "expat",
+        "Version": "2.6.4",
+        "Description": "expat XML parser",
+        "URL": "https://libexpat.github.io/"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lexpat",
+        "Cflags": "-I${includedir}",
+        "Cflags.private": "-DXML_STATIC"
+    }
+}
+

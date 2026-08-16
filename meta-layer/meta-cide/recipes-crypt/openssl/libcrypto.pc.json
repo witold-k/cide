@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "Name": "OpenSSL-libcrypto",
+        "Description": "OpenSSL cryptography library",
+        "Version": "3.6.0-dev"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "enginesdir": "${libdir}/engines",
+        "modulesdir": "${libdir}/providers"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lcrypto",
+        "Libs.private": "-ldl -pthread",
+        "Cflags": "-I${prefix}/include"
+    }
+}
+

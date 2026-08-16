@@ -1,0 +1,8 @@
+[
+{"dir": "gnutls", "url": "https://gitlab.com/gnutls/gnutls.git", "tool": "git", "branch": "master", "commit": "545cf98580cf453382ad40c2902b2fd503e19c4b", "freeze": false, "sm": false},
+{"dir": "libtomcrypt", "url": "https://github.com/libtom/libtomcrypt.git", "tool": "git", "branch": "develop", "commit": "a10cad624d58b4112335f3dc82e42967afdbe143", "freeze": false, "sm": false},
+{"dir": "libtommath", "url": "https://github.com/libtom/libtommath.git", "tool": "git", "branch": "develop", "commit": "ae40a87a920099a7d9d00979570e0c8d917a1fd7", "freeze": false, "sm": false},
+{"dir": "libxcrypt", "url": "https://github.com/besser82/libxcrypt.git", "tool": "git", "branch": "develop", "commit": "174c24d6e87aeae631bc0a7bb1ba983cf8def4de", "freeze": false, "sm": false},
+{"dir": "nettle", "url": "https://git.lysator.liu.se/nettle/nettle", "tool": "git", "branch": "master", "commit": "bb9bba13cc327d578e7dab2921b021bad9af8ee1", "freeze": false, "sm": false},
+{"dir": "openssl", "url": "https://github.com/openssl/openssl.git", "tool": "git", "branch": "master", "commit": "fd2e2860a415c6febbb180ab4133dfa0e9d8d6a6", "freeze": false, "sm": false}
+]

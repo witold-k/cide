@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "MessagePack",
+        "Description": "Binary-based efficient object serialization library",
+        "Version": "6.1.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lmsgpack-c",
+        "Cflags": "-I${includedir}"
+    }
+}
+

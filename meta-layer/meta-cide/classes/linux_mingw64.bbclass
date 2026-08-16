@@ -1,0 +1,1 @@
+../../../../../../buildscripts/bitbake/classes/linux_mingw64.bbclass

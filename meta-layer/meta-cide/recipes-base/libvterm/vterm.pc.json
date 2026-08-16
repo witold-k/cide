@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "vterm",
+        "Description": "Abstract VT220/Xterm/ECMA-48 emulation library",
+        "Version": "0.3.3"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lvterm",
+        "Cflags": "-I${includedir}"
+    }
+}
+

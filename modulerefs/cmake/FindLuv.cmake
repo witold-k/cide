@@ -1,0 +1,22 @@
+if (NOT LIBLUV_FOUND)
+    find_package(PkgConfig     REQUIRED)
+    pkg_check_modules(LIBLUV REQUIRED IMPORTED_TARGET GLOBAL luv)
+    set(LIBLUV_INSTALL "${BB_TOP_DIR}/tmp/work/luv${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(LIBLUV_LIBRARIES    "${LIBLUV_INSTALL}/lib/libluv.so")
+    set(LIBLUV_LIBRARY      "${LIBLUV_LIBRARIES}")
+    set(LIBLUV_INCLUDE_DIR  "${LIBLUV_INCLUDE_DIRS}")
+    set(LIBLUV_INCLUDE_DIRS "${LIBLUV_INCLUDE_DIR}")
+
+    add_library(LUV::LUV SHARED IMPORTED)
+    set_target_properties(LUV::LUV PROPERTIES
+        IMPORTED_LOCATION   "${LIBLUV_LIBRARIES}"
+        INCLUDE_DIRECTORIES "${LIBLUV_INCLUDE_DIR}"
+    )
+
+    message("LIBLUV_LIBRARIES=${LIBLUV_LIBRARIES}")
+    message("LIBLUV_INCLUDE_DIRS=${LIBLUV_INCLUDE_DIRS}")
+    message("LIBLUV_LDFLAGS=${LIBLUV_LDFLAGS}")
+
+    include_directories("${LIBLUV_INCLUDE_DIRS}")
+endif()

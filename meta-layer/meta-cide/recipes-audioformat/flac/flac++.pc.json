@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "FLAC++",
+        "Description": "Free Lossless Audio Codec Library (C++ API)",
+        "Version": "1.4.3",
+        "Requires": "flac"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lFLAC++",
+        "Cflags": "-I${includedir}"
+    }
+}

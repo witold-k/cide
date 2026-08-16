@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "libevent_pthreads",
+        "Description": "libevent_pthreads adds pthreads-based threading support to libevent",
+        "Version": "2.2.1",
+        "Requires": "libevent_core"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -levent_pthreas",
+        "Cflags": "-I${includedir}"
+    }
+}
+

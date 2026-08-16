@@ -1,0 +1,5 @@
+if (NOT Libintl_FOUND)
+    set(Libintl_INCLUDE_DIR "/usr/include")
+    set(Libintl_FOUND 1)
+    include_directories("${Libintl_INCLUDE_DIR}")
+endif()

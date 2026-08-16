@@ -1,0 +1,25 @@
+if (NOT LIBLPEG_FOUND)
+    find_package(PkgConfig     REQUIRED)
+    pkg_check_modules(LIBLPEG REQUIRED IMPORTED_TARGET GLOBAL lpeg)
+    set(LIBLPEG_INSTALL "${BB_TOP_DIR}/tmp/work/lpeg${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(LIBLPEG_LIBRARIES    "${LIBLPEG_INSTALL}/lib/liblpeg.so")
+    set(LIBLPEG_LIBRARY      "${LIBLPEG_LIBRARIES}")
+    set(LIBLPEG_INCLUDE_DIR  "${LIBLPEG_INSTALL}/include")
+    set(LIBLPEG_INCLUDE_DIRS "${LIBLPEG_INSTALL}/include")
+
+    add_library(LPEG::LPEG SHARED IMPORTED)
+    set_target_properties(LPEG::LPEG PROPERTIES
+      IMPORTED_LOCATION   "${LIBLPEG_LIBRARIES}"
+      INCLUDE_DIRECTORIES "${LIBLPEG_INCLUDE_DIR}"
+    )
+
+    add_library(lpeg SHARED IMPORTED)
+    set_target_properties(lpeg PROPERTIES
+      IMPORTED_LOCATION   "${LIBLPEG_LIBRARIES}"
+      INCLUDE_DIRECTORIES "${LIBLPEG_INCLUDE_DIR}"
+    )
+
+    message("LIBLPEG_INCLUDE_DIR=${LIBLPEG_INCLUDE_DIR}")
+    message("LIBLPEG_LDFLAGS=${LIBLPEG_LDFLAGS}")
+endif()

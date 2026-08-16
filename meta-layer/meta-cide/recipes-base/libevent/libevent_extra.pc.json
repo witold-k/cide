@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "libevent_extra",
+        "Description": "libevent_extra",
+        "Version": "2.2.1",
+        "Requires": "libevent_core"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -levent_extra",
+        "Cflags": "-I${includedir}"
+    }
+}
+

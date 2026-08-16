@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "tree-sitter",
+        "Description": "An incremental parsing system for programming tools",
+        "URL": "https://tree-sitter.github.io/tree-sitter/",
+        "Version": "0.25.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -ltree-sitter",
+        "Cflags": "-I${includedir}"
+    }
+}
+

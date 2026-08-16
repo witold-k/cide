@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "oggz",
+        "Description": "A library for reading and writing Ogg encapsulated data.",
+        "Requires": "ogg",
+        "Version": "1.1.1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -loggz",
+        "Libs.private": "-logg",
+        "Cflags": "-I${includedir}"
+    }
+}
+

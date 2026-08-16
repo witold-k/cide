@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "cxxmph",
+        "Description": "minimal perfect hashing c++11 library",
+        "Version": "2.0.2",
+        "URL": "${url}"
+    },
+
+    "vars": {
+        "url": "http://cmph.sourceforge.net/",
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lcxxmph",
+        "Cflags": "-std=c++0x -I${includedir}"
+    }
+}
+

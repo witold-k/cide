@@ -1,0 +1,21 @@
+if (NOT LIBVTERM_FOUND)
+    set(LIBVTERM_INSTALL "${BB_TOP_DIR}/tmp/work/libvterm${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(LIBVTERM_LIBRARY      "${LIBVTERM_INSTALL}/lib/libvterm.so")
+    set(LIBVTERM_LIBRARIES    "${LIBVTERM_INSTALL}/lib/libvterm.so")
+    set(LIBVTERM_INCLUDE_DIR  "${LIBVTERM_INSTALL}/include")
+    set(LIBVTERM_INCLUDE_DIRS "${LIBVTERM_INSTALL}/include")
+    set(LIBVTERM_CFLAGS "-I${LIBVTERM_INCLUDE_DIR}")
+    set(LIBVTERMPATH "-I${LIBVTERM_INSTALL}/bin")
+    set(LIBVTERM_FOUND 1)
+    add_library(vterm SHARED IMPORTED)
+    set_target_properties(vterm PROPERTIES
+      IMPORTED_LOCATION   "${LIBVTERM_LIBRARY}"
+      INCLUDE_DIRECTORIES "${LIBVTERM_INCLUDE_DIR}"
+      )
+
+    message("LIBVTERM_LIBRARY=${LIBVTERM_LIBRARY}")
+    message("LIBVTERM_INCLUDE_DIR=${LIBVTERM_INCLUDE_DIR}")
+
+    include_directories("${LIBVTERM_INCLUDE_DIR}")
+endif()

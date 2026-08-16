@@ -1,0 +1,55 @@
+if (NOT OPENSSL_FOUND)
+    message("use local FindOpenSSL")
+    set (SO "${TOOLCHAIN_SHAREDLIB_SUFFIX}")
+    if (NOT DEFINED BB_WORK_DIR)
+        set(DEVELOPMENT_REL "${CMAKE_SOURCE_DIR}/../..")
+        cmake_path(NORMAL_PATH DEVELOPMENT_REL OUTPUT_VARIABLE DEVELOPMENT)
+        message("OPENSSL: DEV = ${DEVELOPMENT}")
+        set(BB_WORK_DIR "${DEVELOPMENT}/meta-layer/build/tmp/work")
+        set(BB_TARGET "native")
+        set(BB_TARGET_SUFFIX "")
+    endif()
+
+    if (DEFINED BB_WORK_DIR)
+        set(OPENSSL_INSTALL "${BB_WORK_DIR}/openssl${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}" CACHE FILEPATH "OPENSSL_INSTALL")
+    else ()
+        set(OPENSSL_INSTALL "${CMAKE_PRODUCT_BASE}/projects/openssl/${CMAKE_TARGET}/deploy" CACHE FILEPATH "OPENSSL_INSTALL")
+    endif ()
+
+    if (EXISTS "${OPENSSL_INSTALL}/lib")
+        set (OPENSSL_LIBDIR "${OPENSSL_INSTALL}/lib")
+    elseif (EXISTS "${OPENSSL_INSTALL}/lib64")
+        set (OPENSSL_LIBDIR "${OPENSSL_INSTALL}/lib64")
+    endif ()
+
+    set(OPENSSL_SSL_LIBRARY    "${OPENSSL_LIBDIR}/libssl${SO}"    CACHE FILEPATH "OPENSSL_LIBRARY")
+    set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_LIBDIR}/libcrypto${SO}" CACHE FILEPATH "OPENSSL_LIBRARY")
+    set(OPENSSL_LIBRARIES      "${OPENSSL_LIBDIR}/libssl${SO}" "${OPENSSL_INSTALL}/lib/libcrypto${SO}"  CACHE FILEPATH "OPENSSL_LIBRARIES")
+    set(OPENSSL_SLIBRARIES     "${OPENSSL_LIBDIR}/libssl.a"    "${OPENSSL_INSTALL}/lib/libcrypto.a"     CACHE FILEPATH "OPENSSL_SLIBRARIES")
+    set(OPENSSL_LIBRARY_DIR    "${OPENSSL_LIBDIR}"             "${OPENSSL_INSTALL}/lib"                 CACHE FILEPATH "OPENSSL_LIBRARY_DIR")
+    set(OPENSSL_INCLUDE_DIR    "${OPENSSL_INSTALL}/include"       CACHE FILEPATH "OPENSSL_INCLUDE_DIR")
+    set(OPENSSL_INCLUDE_DIRS   "${OPENSSL_INSTALL}/include"       CACHE FILEPATH "OPENSSL_INCLUDE_DIRS")
+    set(OPENSSL_FOUND 1)
+    set(OpenSSL_FOUND 1)
+
+    add_library(OpenSSL::SSL UNKNOWN IMPORTED)
+    set_target_properties(OpenSSL::SSL PROPERTIES
+        INTERFACE_INCLUDE_DIRECTORIES "${OPENSSL_INCLUDE_DIRS}"
+    )
+
+    set_property(TARGET OpenSSL::SSL APPEND PROPERTY
+        IMPORTED_LOCATION "${OPENSSL_SSL_LIBRARY}"
+    )
+
+    add_library(OpenSSL::Crypto UNKNOWN IMPORTED)
+    set_target_properties(OpenSSL::Crypto PROPERTIES
+        INTERFACE_INCLUDE_DIRECTORIES "${OPENSSL_INCLUDE_DIRS}"
+    )
+
+    set_property(TARGET OpenSSL::Crypto APPEND PROPERTY
+        IMPORTED_LOCATION "${OPENSSL_CRYPTO_LIBRARY}"
+    )
+
+    message("OPENSSL_LIBRARIES=${OPENSSL_LIBRARIES}")
+    message("OPENSSL_INCLUDE_DIRS=${OPENSSL_INCLUDE_DIRS}")
+endif()

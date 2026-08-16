@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "Wayland Cursor",
+        "Description": "Wayland cursor helper library",
+        "Version": "1.23.90",
+        "Requires.private": "wayland-client"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lwayland-cursor",
+        "Libs.private": "-lm -pthread -lrt",
+        "Cflags": "-I${includedir}"
+    }
+}
+

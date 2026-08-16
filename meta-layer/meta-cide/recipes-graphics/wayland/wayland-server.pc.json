@@ -1,0 +1,25 @@
+{
+    "meta": {
+        "Name": "Wayland Server",
+        "Description": "Server side implementation of the Wayland protocol",
+        "Version": "1.23.90",
+        "Requires.private": "libffi"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "datarootdir": "${PREFIX}/share",
+        "pkgdatadir": "${datarootdir}/wayland"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lwayland-server",
+        "Libs.private": "-lm -pthread -lrt",
+        "Cflags": "-I${includedir}"
+    }
+}
+

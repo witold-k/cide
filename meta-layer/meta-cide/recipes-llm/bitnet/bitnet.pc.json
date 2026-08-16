@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "bitnet",
+        "Description": "bitnet",
+        "Version": "1.1.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${prefix}",
+        "bindir": "${prefix}/bin",
+        "libdir": "${prefix}/lib",
+        "includedir": "${prefix}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lllamacpp",
+        "Cflags": "-I${includedir}"
+    }
+}
+

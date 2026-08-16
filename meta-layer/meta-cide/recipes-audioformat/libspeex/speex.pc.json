@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "speex",
+        "Description": "Speex is an audio codec tuned for speech",
+        "Version": "1.2.1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lspeex",
+        "Libs.private": "-lm",
+        "Cflags": "-I${includedir}"
+    }
+}
+

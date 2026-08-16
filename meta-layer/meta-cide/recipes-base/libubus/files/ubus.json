@@ -1,0 +1,14 @@
+{
+    "group": "ubus",
+    "access": {
+        "*": {
+            "methods": [ "*" ],
+            "tags": [ "*" ],
+            "acl": [ "*" ]
+        },
+    },
+    "subscribe": [ "*" ],
+    "publish": [ "*" ],
+    "listen": [ "*" ],
+    "send": [ "*" ]
+}

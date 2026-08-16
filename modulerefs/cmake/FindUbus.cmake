@@ -1,0 +1,13 @@
+set(UBUS_INSTALL "${BB_TOP_DIR}/tmp/work/libubus${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+set(UBUS_LIBRARY      "${UBUS_INSTALL}/lib/libubus.so")
+set(UBUS_INCLUDE_DIR  "${UBUS_INSTALL}/include")
+set(UBUS_INCLUDE_DIRS "${UBUS_INSTALL}/include")
+set(UBUS_CFLAGS "-I${UBUS_INCLUDE_DIR}")
+set(UBUSPATH "-I${UBUS_INSTALL}/bin")
+set(UBUS_FOUND 1)
+
+message("UBUS_LIBRARY=${UBUS_LIBRARY}")
+message("UBUS_INCLUDE_DIR=${UBUS_INCLUDE_DIR}")
+
+include_directories("${UBUS_INCLUDE_DIR}")

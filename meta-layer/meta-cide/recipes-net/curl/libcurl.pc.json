@@ -1,0 +1,29 @@
+{
+    "meta": {
+        "Name": "libcurl",
+        "URL": "https://curl.se/",
+        "Description": "Library to transfer files with HTTP, FTP, etc.",
+        "Version": "8.12.0-DEV",
+        "Requires.private": "openssl,zlib"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "supported_protocols": "DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS IPFS IPNS MQTT POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP WS WSS",
+        "supported_features": "alt-svc AsynchDNS brotli HSTS HTTPS-proxy IPv6 Largefile libz NTLM PSL SSL threadsafe UnixSockets",
+        "libs-switch-list": "-lssl -lcrypto -lunistring -lidn2 -lz -lbrotlidec -lbrotlienc -lbrotlicommon -lpsl",
+        "libs-dir-lswitch-list": "-L${PREFIX.OPENSSL}/lib -L${PREFIX.ZLIB}/lib -L${PREFIX.BROTLI}/lib -L${PREFIX.PSL}/lib"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lcurl ${libs-dir-lswitch-list} -lssl -lcrypto -lunistring -lidn2 -lz -lbrotlidec -lbrotlienc -lbrotlicommon -lpsl",
+        "Libs.private": "${libs-dir-lswitch-list} -lssl -lcrypto -lunistring -lidn2 -lz -lbrotlidec -lbrotlienc -lbrotlicommon -lpsl",
+        "Cflags": "-I${includedir}",
+        "Cflags.private": "-DCURL_STATICLIB"    
+    }
+}
+

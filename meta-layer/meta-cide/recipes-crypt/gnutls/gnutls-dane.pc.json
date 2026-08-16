@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "GnuTLS-DANE",
+        "Description": "DANE security library for the GNU system",
+        "URL": "https://www.gnu.org/software/gnutls/",
+        "Version": "3.8.8",
+        "Requires.private": "gnutls"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lgnutls-dane",
+        "Cflags": "-I${includedir}"
+    }
+}
+

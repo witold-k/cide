@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libevent_core",
+        "Description": "libevent_core",
+        "Version": "2.2.1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -levent_core",
+        "Cflags": "-I${includedir}"
+    }
+}
+

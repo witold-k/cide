@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "libpng",
+        "Description": "Loads and saves PNG files",
+        "Version": "1.6.45",
+        "Requires.private": "zlib"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${prefix}",
+        "bindir": "${prefix}/bin",
+        "libdir": "${prefix}/lib",
+        "includedir": "${prefix}/include/libpng16"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lpng16 -lz -lm",
+        "Libs.private": "-L${PREFIX.LIBZ} -lz -lm",
+        "Cflags": "-I${includedir}"
+    }
+}
+

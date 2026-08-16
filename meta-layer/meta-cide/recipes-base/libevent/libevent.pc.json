@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libevent",
+        "Description": "libevent is an asynchronous notification event loop library",
+        "Version": "2.2.1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -levent_core -levent_extra",
+        "Cflags": "-I${includedir}"
+    }
+}
+

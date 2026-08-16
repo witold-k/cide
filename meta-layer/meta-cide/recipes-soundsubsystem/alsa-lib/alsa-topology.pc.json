@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "Name": "alsa-topology",
+        "Description": "Advanced Linux Sound Architecture (ALSA) - Topology Library",
+        "Version": "1.2.14",
+        "Requires": "alsa >= 1.2.14"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build": {
+        "Libs": "-latopology"
+    }
+}
+

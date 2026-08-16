@@ -1,0 +1,27 @@
+if (NOT TOMMATH_FOUND)
+    set(TOMMATH_INSTALL "${BB_TOP_DIR}/tmp/work/libtommath${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(TOMMATH_LIBRARY      "${TOMMATH_INSTALL}/lib/libtommath.so")
+    set(TOMMATH_INCLUDE_DIR  "${TOMMATH_INSTALL}/include")
+    set(TOMMATH_INCLUDE_DIRS "${TOMMATH_INSTALL}/include")
+    set(TOMMATH_CFLAGS "-I${TOMMATH_INCLUDE_DIR}")
+    set(TOMMATHPATH "-I${TOMMATH_INSTALL}/bin")
+    set(TOMMATH_FOUND 1)
+    add_library(tommath SHARED IMPORTED)
+    set_target_properties(tommath PROPERTIES
+      IMPORTED_LOCATION   "${TOMMATH_LIBRARY}"
+      INCLUDE_DIRECTORIES "${TOMMATH_INCLUDE_DIR}"
+    )
+
+    add_library(TOMMATH::TOMMATH SHARED IMPORTED)
+    set_target_properties(TOMMATH::TOMMATH PROPERTIES
+      IMPORTED_LOCATION   "${TOMMATH_LIBRARY}"
+      INCLUDE_DIRECTORIES "${TOMMATH_INCLUDE_DIR}"
+    )
+
+    message("TOMMATH_LIBRARY=${TOMMATH_LIBRARY}")
+    message("TOMMATH_INCLUDE_DIR=${TOMMATH_INCLUDE_DIR}")
+
+    include_directories(SYSTEM "${TOMMATH_INCLUDE_DIR}" "${TOMMATH_INCLUDE_DIR}/libtommath")
+endif()
+

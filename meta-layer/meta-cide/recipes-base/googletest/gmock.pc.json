@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "gmock",
+        "Description": "GoogleMock (without main() function)",
+        "Version": "1.15.2",
+        "URL": "https://github.com/google/googletest",
+        "Requires": "gtest = 1.15.2"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lgmock ",
+        "Cflags": "-I${includedir} -DGTEST_HAS_PTHREAD=1"
+    }
+}
+

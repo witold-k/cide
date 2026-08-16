@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "Name": "Wayland Client",
+        "Description": "Wayland client side library",
+        "Version": "1.23.90",
+        "Requires.private": "libffi"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "datarootdir": "${PREFIX}/share",
+        "pkgdatadir": "${datarootdir}/wayland",
+        "ffilibdir": "${PREFIX.LIBFFI}/lib"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lwayland-client -L${ffilibdir} -lffi",
+        "Libs.private": "-lm -pthread -lrt",
+        "Cflags": "-I${includedir}"
+    }
+}
+

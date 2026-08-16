@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "Wayland Protocols",
+        "Description": "Wayland Protocols",
+        "Version": "1.30.00"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "datarootdir": "${PREFIX}/share",
+        "pkgdatadir": "${PREFIX}/share/wayland-protocols"
+    },
+
+    "build":  {
+        "Cflags": "-I${includedir}"
+    }
+}
+

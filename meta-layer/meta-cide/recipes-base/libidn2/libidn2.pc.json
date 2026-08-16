@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "libidn2",
+        "Description": "Library implementing IDNA2008 and TR46",
+        "Version": "2.3.7.3-61ee-dirty"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lidn2",
+        "Libs.private": "-L${PREFIX.UNISTRING} -lunistring -R${PREFIX.UNISTRING}",
+        "Cflags": "-I${includedir}"
+    }
+}
+

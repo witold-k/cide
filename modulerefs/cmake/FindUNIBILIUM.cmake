@@ -1,0 +1,21 @@
+if (NOT UNIBILIUM_FOUND)
+    set(UNIBILIUM_INSTALL "${BB_TOP_DIR}/tmp/work/unibilium${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}/${CMAKE_INSTALL_PREFIX}")
+
+    set(UNIBILIUM_LIBRARY      "${UNIBILIUM_INSTALL}/lib/libunibilium.a")
+    set(UNIBILIUM_LIBRARIES    "${UNIBILIUM_INSTALL}/lib/libunibilium.a")
+    set(UNIBILIUM_INCLUDE_DIR  "${UNIBILIUM_INSTALL}/include")
+    set(UNIBILIUM_INCLUDE_DIRS "${UNIBILIUM_INSTALL}/include")
+    set(UNIBILIUM_CFLAGS "-I${UNIBILIUM_INCLUDE_DIR}")
+    set(LUAPATH "-I${UNIBILIUM_INSTALL}/bin")
+    set(UNIBILIUM_FOUND 1)
+    add_library(unibilium SHARED IMPORTED)
+    set_target_properties(unibilium PROPERTIES
+      IMPORTED_LOCATION   "${UNIBILIUM_LIBRARY}"
+      INCLUDE_DIRECTORIES "${UNIBILIUM_INCLUDE_DIR}"
+      )
+
+    message("UNIBILIUM_LIBRARY=${UNIBILIUM_LIBRARY}")
+    message("UNIBILIUM_INCLUDE_DIR=${UNIBILIUM_INCLUDE_DIR}")
+
+    include_directories("${UNIBILIUM_INCLUDE_DIR}")
+endif()

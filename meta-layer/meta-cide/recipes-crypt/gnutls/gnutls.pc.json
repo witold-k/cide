@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "Name": "GnuTLS",
+        "Description": "Transport Security Layer implementation for the GNU system",
+        "URL": "https://www.gnutls.org/",
+        "Version": "3.8.8",
+        "Requires.private": "nettle, hogweed, libtasn1, libidn2, p11-kit-1"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+        "libs-switch-list": "-lgmp -lunistring -latomic" ,
+        "libs-dir-lswitch-list": "-L${PREFIX.GMP}/lib -L${PREFIX.LIBUNISTRING}/lib"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lgnutls",
+        "Libs.private": "${libs-dir-lswitch-list}, ${libs-switch-list}",
+        "Cflags": "-I${includedir}"
+    }
+}
+

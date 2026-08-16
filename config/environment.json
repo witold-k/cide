@@ -1,0 +1,75 @@
+{
+    "private": {
+        "NEXT_VERSION":          "v0.12",
+
+        "PROJECT_ROOT:DIR":      "..",
+        "PROJECT_NAME":          "(default)",
+        "DEPLOY_DIR:DIR":        "../deploy",
+        "ROOTFS_DIR:DIR":        "../meta-layer/build/tmp/rootfs",
+
+        "CURRENT_DATE":          "(default)",
+
+        "REPOSITORY":            "svnuser@naspi:svn/cide.git",
+        "REPOSITORY_RELEASE":    "svnuser@naspi:svn/cide-release.git",
+
+        "RUSTUP_HOME":           "/opt/rust",
+
+        "COMPILER_VERSION":      "v1.4-2025-10-24",
+        "COMPILER_ROOT:DIR":     "/opt/compiler",
+        "COMPILER_DIR:DIR":      "/opt/compiler/${COMPILER_VERSION}",
+        "COMPILER_GIT":          "svnuser@naspi:svn/crosstool-ng-release.git",
+
+        "COMPILER_2_VERSION":    "v1.0-gcc-cuda-2025-10-24",
+        "COMPILER_2_ROOT:DIR":   "/opt/compiler",
+        "COMPILER_2_DIR:DIR":    "/opt/compiler/${COMPILER_VERSION}",
+        "COMPILER_2_GIT":        "svnuser@naspi:svn/crosstool-ng-release.git",
+
+        "BUILDSYSTEMS_VERSION":  "v0.12",
+        "BUILDSYSTEMS_ROOT:DIR": "/opt/buildsystems",
+        "BUILDSYSTEMS_DIR:DIR":  "/opt/buildsystems/${BUILDSYSTEMS_VERSION}",
+        "BUILDSYSTEMS_GIT":      "svnuser@naspi:svn/buildsystems-release.git",
+
+        "CUDA_HOME:DIR":         "/usr/local/cuda-13.2",
+
+        "BITBAKE_ROOT:DIR":      "${BUILDSYSTEMS_DIR}/${BUILDSYSTEMS_VERSION}/native/opt/buildsystems/bitbake",
+        "BITBAKE_EXE:FILE":      "${BITBAKE_ROOT}/bin/bitbake",
+
+        "DOCKER_IMAGE":          "crosstool-ng-buildsystem:1",
+
+        "MODULES_DIR:DIR":       "${PROJECT_ROOT}/modules",
+
+        "MODULEREFS_JSON:DIR":   "${PROJECT_ROOT}/modulerefs/json",
+        "BUILD_ROOT:DIR":        "${PROJECT_ROOT}/meta-layer/build",
+        "BUILD_TMP:DIR":         "${BUILD_ROOT}/tmp",
+        "BUILD_WORK:DIR":        "${BUILD_TMP}/work",
+        "TARGETS":             [
+            "native",
+            "avr",
+            "linux_gcc_arm64",
+            "linux_gcc_arm32",
+            "linux_mingw32",
+            "linux_mingw64",
+            "xtensa_esp32"
+        ]
+    },
+
+    "env:prepend": {},
+    "env:append": {
+        "PATH":            "${BITBAKE_ROOT}/bin:${CUDA_HOME}/bin"
+    },
+    "env:set": {
+        "PROJECT_ROOT": "${PROJECT_ROOT}",
+        "CUDA_HOME":    "${CUDA_HOME}",
+        "BBPATH":       "${BITBAKE_ROOT}",
+        "BITBAKE_EXE":  "${BITBAKE_EXE}",
+        "BITBAKE_ROOT": "${BITBAKE_ROOT}",
+        "BUILD_TMP":    "${BUILD_TMP}",
+        "BUILD_WORK":   "${BUILD_WORK}",
+        "COMPILER_DIR": "${COMPILER_DIR}",
+        "COMPILER_VERSION": "${COMPILER_VERSION}",
+        "DOCKER_IMAGE": "${DOCKER_IMAGE}",
+        "RUNDOCKER_OPT_COMPILER_ONLY": "1",
+        "RUSTUP_HOME":  "${RUSTUP_HOME}"
+    }
+}
+

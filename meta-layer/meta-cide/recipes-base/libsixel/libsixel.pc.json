@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "libsixel",
+        "Description": "A lightweight, fast implementation of DEC SIXEL graphics codec",
+        "Version": "1.8.6"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lsixel",
+        "Cflags": "-I${includedir}"
+    }
+}
+

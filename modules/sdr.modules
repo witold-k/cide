@@ -1,0 +1,3 @@
+[
+{"dir": "librtlsdr", "url": "https://github.com/steve-m/librtlsdr.git", "tool": "git", "branch": "master", "commit": "797f8143266d983c56d8f35d2d442527529dd8a5", "freeze": false, "sm": false}
+]

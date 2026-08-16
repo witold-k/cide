@@ -1,0 +1,4 @@
+[
+{"dir": "glove", "url": "https://github.com/stanfordnlp/GloVe.git", "tool": "git", "branch": "master", "commit": "52f7dbc512be3f72e9c11e7cbb19dfdfa4651e9c", "freeze": false, "sm": false},
+{"dir": "word2vec", "url": "https://github.com/dav/word2vec.git", "tool": "git", "branch": "master", "commit": "fb150971c2accbe86c3c6b0a86a57804807f8ec4", "freeze": false, "sm": false}
+]

@@ -1,0 +1,15 @@
+[
+{"dir": "abook", "url": "https://git.code.sf.net/p/abook/git", "tool": "git", "branch": "master", "commit": "b5e4a4daec1c7842e214b50a0f267e07d9792311", "freeze": false, "sm": false},
+{"dir": "emacs", "url": "https://git.savannah.gnu.org/git/emacs.git", "tool": "git", "branch": "master", "commit": "84e646f0b320bbb3560706cf588d4cc3a50f4abd", "freeze": false, "sm": false},
+{"dir": "fzy", "url": "https://github.com/jhawthorn/fzy", "tool": "git", "branch": "master", "commit": "34b88869d022e861da4846c4463aea3ddfb3ff30", "freeze": false, "sm": false},
+{"dir": "kakoune", "url": "https://github.com/mawww/kakoune", "tool": "git", "branch": "master", "commit": "92c450dc2b77181202f8be1f0a1e5553aa00d465", "freeze": false, "sm": false},
+{"dir": "lrzsz", "url": "https://git.code.sf.net/p/lrzsz/code", "tool": "git", "branch": "master", "commit": "74dd8f4c96616e2731547a74c3aa12fa30e67dd9", "freeze": false, "sm": false},
+{"dir": "mc", "url": "https://github.com/MidnightCommander/mc.git", "tool": "git", "branch": "master", "commit": "19d0960261bb7f7812c45aabb2e07ec653782eec", "freeze": false, "sm": false},
+{"dir": "neovim", "url": "https://github.com/neovim/neovim.git", "tool": "git", "branch": "master", "commit": "b169d9376c9bd7edc7277d5e089894b3f6a43f34", "freeze": false, "sm": false},
+{"dir": "newsboat", "url": "https://github.com/newsboat/newsboat", "tool": "git", "branch": "master", "commit": "56a591150df4f5e1f9ccc1238a085be1808b7edb", "freeze": false, "sm": false},
+{"dir": "sc-im", "url": "https://github.com/andmarti1424/sc-im.git", "tool": "git", "branch": "main", "commit": "b5645711b2d2d7d106f93ca5ba2a32b75b49813e", "freeze": false, "sm": false},
+{"dir": "taskwarrior", "url": "https://github.com/GothenburgBitFactory/taskwarrior.git", "tool": "git", "branch": "develop", "commit": "74bd22ad53125a6d3f00d4ab65a28c165578d54a", "freeze": false, "sm": false},
+{"dir": "tig", "url": "https://github.com/jonas/tig.git", "tool": "git", "branch": "master", "commit": "1b86f070a1f6d4c686a09b997fd4249d52a2a272", "freeze": false, "sm": false},
+{"dir": "tmux", "url": "https://github.com/tmux/tmux.git", "tool": "git", "branch": "master", "commit": "851c5a933d4838c32ad06c248b2ba975d106149c", "freeze": false, "sm": false},
+{"dir": "xpdf-4.00", "url": "https://github.com/kermitt2/xpdf-4.00.git", "tool": "git", "branch": "master", "commit": "25c135d4d93641874add0bbbf4e570e92dc73c06", "freeze": false, "sm": false}
+]

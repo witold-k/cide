@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "Name": "luv",
+        "Description": "LUV",
+        "Version": "1.0.0"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${prefix}",
+        "bindir": "${prefix}/bin",
+        "libdir": "${prefix}/lib",
+        "includedir": "${prefix}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lluv",
+        "Cflags": "-I${includedir}"
+    }
+}
+

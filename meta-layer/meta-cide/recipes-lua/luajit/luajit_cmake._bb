@@ -1,0 +1,6 @@
+SUMMARY = "luajit"
+LICENSE = "CLOSED"
+MODULE = "base/luajit-cmake"
+SRCPV = "1"
+
+inherit simplecmake encapsulate

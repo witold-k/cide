@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "liburiparser",
+        "Description": "URI parsing and handling library",
+        "Version": "1.0.2",
+        "URL": "https://uriparser.github.io/"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -luriparser",
+        "Cflags": "-I${includedir}"
+    }
+}
+

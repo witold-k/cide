@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "Name": "libncurses",
+        "Description": "libncurses"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lncursesw",
+        "Cflags": "-I${includedir} -I${includedir}/ncursesw"
+    }
+}
+

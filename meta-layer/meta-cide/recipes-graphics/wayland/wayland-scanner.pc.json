@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "Name": "Wayland Scanner",
+        "Description": "Wayland scanner",
+        "Version": "1.30.00"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include",
+        "datarootdir": "${PREFIX}/share",
+        "pkgdatadir": "${datarootdir}/wayland",
+        "wayland_scanner": "${bindir}/wayland-scanner"
+    },
+
+    "build":  {
+        "Cflags": "-I${includedir}"
+    }
+}
+

@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "Name": "libpcre2-posix",
+        "Description": "Posix compatible interface to libpcre2-8",
+        "Version": "10.45",
+        "Requires.private": "libpcre2-8"
+    },
+
+    "vars": {
+        "prefix": "${PREFIX}",
+        "exec_prefix": "${PREFIX}",
+        "bindir": "${PREFIX}/bin",
+        "libdir": "${PREFIX}/lib",
+        "includedir": "${PREFIX}/include"
+    },
+
+    "build":  {
+        "Libs": "-L${libdir} -lpcre2-posix",
+        "Cflags": "-I${includedir}"
+    }
+}
+
