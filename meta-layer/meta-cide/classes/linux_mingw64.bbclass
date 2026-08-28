@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/linux_mingw64.bbclass
+../../../modules/buildscripts/bitbake/classes/linux_mingw64.bbclass

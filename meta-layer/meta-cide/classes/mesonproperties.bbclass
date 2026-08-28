@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/mesonproperties.bbclass
+../../../modules/buildscripts/bitbake/classes/mesonproperties.bbclass

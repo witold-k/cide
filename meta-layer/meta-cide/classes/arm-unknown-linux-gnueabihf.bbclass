@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/arm-unknown-linux-gnueabihf.bbclass
+../../../modules/buildscripts/bitbake/classes/arm-unknown-linux-gnueabihf.bbclass

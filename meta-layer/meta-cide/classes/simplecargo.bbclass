@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/simplecargo.bbclass
+../../../modules/buildscripts/bitbake/classes/simplecargo.bbclass

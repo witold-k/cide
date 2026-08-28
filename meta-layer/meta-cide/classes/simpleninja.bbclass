@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/simpleninja.bbclass
+../../../modules/buildscripts/bitbake/classes/simpleninja.bbclass

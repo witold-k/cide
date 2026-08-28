@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/encapsulate.bbclass
+../../../modules/buildscripts/bitbake/classes/encapsulate.bbclass

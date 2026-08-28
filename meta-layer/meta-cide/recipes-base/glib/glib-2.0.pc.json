@@ -2,7 +2,7 @@
     "meta": {
         "Name": "GLib",
         "Description": "C Utility Library",
-        "Version": "2.83.2",
+        "Version": "2.90.2",
         "Requires.private": "libpcre2-8"
     },
 

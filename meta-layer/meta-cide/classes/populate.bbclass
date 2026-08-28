@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/populate.bbclass
+../../../modules/buildscripts/bitbake/classes/populate.bbclass

@@ -3,5 +3,5 @@
 {"dir": "bzip2", "url": "https://gitlab.com/bzip2/bzip2.git", "tool": "git", "branch": "master", "commit": "66c46b8c9436613fd81bc5d03f63a61933a4dcc3", "freeze": false, "sm": false},
 {"dir": "liblzma", "url": "https://github.com/ShiftMediaProject/liblzma.git", "tool": "git", "branch": "master", "commit": "e0923ebe73615bda8097bf68c510dedf8c120c0a", "freeze": false, "sm": false},
 {"dir": "zlib", "url": "https://github.com/madler/zlib.git", "tool": "git", "branch": "master", "commit": "da607da739fa6047df13e66a2af6b8bec7c2a498", "freeze": false, "sm": false},
-{"dir": "zstd", "url": "https://github.com/facebook/zstd.git", "tool": "git", "branch": "dev", "commit": "82d322c4973d9e2968d94047a40892bc6d9a9bdf", "freeze": false, "sm": false}
+{"dir": "zstd", "url": "https://github.com/facebook/zstd.git", "tool": "git", "branch": "dev", "commit": "0716f554df4262cf8530e006bfcc3d9d71e4314e", "freeze": false, "sm": false}
 ]

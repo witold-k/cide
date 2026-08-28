@@ -2,7 +2,7 @@
     "meta": {
         "Name": "GIO",
         "Description": "glib I/O library",
-        "Version": "2.83.2",
+        "Version": "2.90.2",
         "Requires": "glib-2.0, gobject-2.0",
         "Requires.private": "zlib, gmodule-no-export-2.0"
     },

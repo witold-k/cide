@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/simplescons.bbclass
+../../../modules/buildscripts/bitbake/classes/simplescons.bbclass

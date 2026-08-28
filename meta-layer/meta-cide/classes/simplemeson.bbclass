@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/simplemeson.bbclass
+../../../modules/buildscripts/bitbake/classes/simplemeson.bbclass

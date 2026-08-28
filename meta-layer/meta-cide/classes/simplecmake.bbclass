@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/simplecmake.bbclass
+../../../modules/buildscripts/bitbake/classes/simplecmake.bbclass

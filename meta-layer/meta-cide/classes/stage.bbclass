@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/stage.bbclass
+../../../modules/buildscripts/bitbake/classes/stage.bbclass

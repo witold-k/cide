@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/simpleautoconfigure.bbclass
+../../../modules/buildscripts/bitbake/classes/simpleautoconfigure.bbclass

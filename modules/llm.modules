@@ -1,4 +1,4 @@
 [
 {"dir": "BitNet", "url": "https://github.com/microsoft/BitNet.git", "tool": "git", "branch": "main", "commit": "0b341e582afbf9e1011f24744b554c96a3477eb5", "freeze": false, "sm": false},
-{"dir": "llama_cpp", "url": "https://github.com/ggml-org/llama.cpp.git", "tool": "git", "branch": "master", "commit": "6b4344ecc7e6a493daba9681991852eb06bb3b33", "freeze": false, "sm": false}
+{"dir": "llama_cpp", "url": "https://github.com/ggml-org/llama.cpp.git", "tool": "git", "branch": "master", "commit": "0379a19f09495da510e11785261b194ecb99097f", "freeze": false, "sm": false}
 ]

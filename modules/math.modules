@@ -1,6 +1,6 @@
 [
 {"dir": "blis", "url": "https://github.com/flame/blis.git", "tool": "git", "branch": "master", "commit": "061c2ebef87eda9189e6cdf38af4ea3d4a8efe7b", "freeze": false, "sm": false},
 {"dir": "gmp", "url": "https://github.com/gmp-mirror/gmp.git", "tool": "git", "branch": "master", "commit": "4b3b66d3328e390af894b97e0438aed90c3305be", "freeze": false, "sm": false},
-{"dir": "lapack", "url": "https://github.com/Reference-LAPACK/lapack.git", "tool": "git", "branch": "master", "commit": "51b349470b3b26c948d068deb45c9b120a47ed32", "freeze": false, "sm": false},
-{"dir": "mpfr", "url": "https://gitlab.inria.fr/mpfr/mpfr.git", "tool": "git", "branch": "master", "commit": "ec384ebf2017525eb5c40cc1d807251f7adbe2fa", "freeze": false, "sm": false}
+{"dir": "lapack", "url": "https://github.com/Reference-LAPACK/lapack.git", "tool": "git", "branch": "master", "commit": "dd51569e997c67ca868eca74b3f2b2eae5c69e90", "freeze": false, "sm": false},
+{"dir": "mpfr", "url": "https://gitlab.inria.fr/mpfr/mpfr.git", "tool": "git", "branch": "master", "commit": "7bea490b1216f0a0767f9d85792bd0497f4550be", "freeze": false, "sm": false}
 ]

@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/compiler.bbclass
+../../../modules/buildscripts/bitbake/classes/compiler.bbclass

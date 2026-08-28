@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/x86_64-unknown-linux-gnu.bbclass
+../../../modules/buildscripts/bitbake/classes/x86_64-unknown-linux-gnu.bbclass

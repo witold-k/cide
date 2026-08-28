@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/test.bbclass
+../../../modules/buildscripts/bitbake/classes/test.bbclass

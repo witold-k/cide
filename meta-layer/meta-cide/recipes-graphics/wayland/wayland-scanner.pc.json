@@ -2,7 +2,7 @@
     "meta": {
         "Name": "Wayland Scanner",
         "Description": "Wayland scanner",
-        "Version": "1.30.00"
+        "Version": "1.26.90"
     },
 
     "vars": {

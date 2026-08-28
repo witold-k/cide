@@ -5,7 +5,7 @@
 {"dir": "liboggz", "url": "https://gitlab.xiph.org/xiph/liboggz.git", "tool": "git", "branch": "master", "commit": "1c60a9491b1b6b64f07482114fc36bcbe11c2e65", "freeze": false, "sm": false},
 {"dir": "libxspf", "url": "https://gitlab.xiph.org/xiph/libxspf", "tool": "git", "branch": "master", "commit": "63495bcec37fccbe955ccab106c1fd1ea49cb965", "freeze": false, "sm": false},
 {"dir": "ogg", "url": "https://github.com/xiph/ogg.git", "tool": "git", "branch": "master", "commit": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822", "freeze": false, "sm": false},
-{"dir": "opus", "url": "https://gitlab.xiph.org/xiph/opus.git", "tool": "git", "branch": "master", "commit": "c85499757c148fede8604cffa12454206b6138ba", "freeze": false, "sm": false},
+{"dir": "opus", "url": "https://gitlab.xiph.org/xiph/opus.git", "tool": "git", "branch": "main", "commit": "212d66c20944d0a0db91132f826a27dd0d5edd5d", "freeze": false, "sm": false},
 {"dir": "rav1e", "url": "https://gitlab.xiph.org/xiph/rav1e.git", "tool": "git", "branch": "master", "commit": "16ea18ea6eaf3f0e8549a6804ebb45ea37f659fb", "freeze": false, "sm": false},
 {"dir": "speex", "url": "https://gitlab.xiph.org/xiph/speex.git", "tool": "git", "branch": "master", "commit": "05895229896dc942d453446eba6f9f5ddcf95422", "freeze": false, "sm": false},
 {"dir": "vorbis", "url": "https://gitlab.xiph.org/xiph/vorbis.git", "tool": "git", "branch": "master", "commit": "c2aa86b05e981c96bf381fc6aa11cdd03eccc2fb", "freeze": false, "sm": false}

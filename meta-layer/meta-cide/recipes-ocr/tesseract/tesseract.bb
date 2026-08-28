@@ -31,11 +31,12 @@ CMAKE_EXE_LINKER_FLAGS = "\
 "
 
 NOWARN = ' \
+    -Wno-class-memaccess \
     -Wno-extra \
     -Wno-sign-compare \
-    -Wno-unused-parameter \
     -Wno-stringop-truncation \
     -Wno-switch \
+    -Wno-unused-parameter \
 '
 
 CMAKE_OPTIONS = " \

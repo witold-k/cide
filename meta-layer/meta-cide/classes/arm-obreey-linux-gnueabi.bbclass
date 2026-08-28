@@ -1,1 +1,1 @@
-../../../../../../buildscripts/bitbake/classes/arm-obreey-linux-gnueabi.bbclass
+../../../modules/buildscripts/bitbake/classes/arm-obreey-linux-gnueabi.bbclass

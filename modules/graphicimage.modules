@@ -1,12 +1,12 @@
 [
-{"dir": "fontconfig", "url": "https://gitlab.freedesktop.org/fontconfig/fontconfig.git", "tool": "git", "branch": "main", "commit": "d32a1911248576d01583557efcfe4b48fb2d0a5e", "freeze": false, "sm": false},
-{"dir": "freetype", "url": "https://gitlab.freedesktop.org/freetype/freetype.git", "tool": "git", "branch": "master", "commit": "9e9d3b73f31367dbb4261f93c727a277f6632c77", "freeze": false, "sm": false},
-{"dir": "fribidi", "url": "https://github.com/fribidi/fribidi.git", "tool": "git", "branch": "master", "commit": "5d829288e00b9dd709c8050f469ad0b2737f822c", "freeze": false, "sm": false},
+{"dir": "fontconfig", "url": "https://gitlab.freedesktop.org/fontconfig/fontconfig.git", "tool": "git", "branch": "main", "commit": "b8135445a7f7b36639ef7a4ebfa18af5f9bd23dd", "freeze": false, "sm": false},
+{"dir": "freetype", "url": "https://gitlab.freedesktop.org/freetype/freetype.git", "tool": "git", "branch": "master", "commit": "4ddc997e0798db7d23255ab7741b91da6d1a879f", "freeze": false, "sm": false},
+{"dir": "fribidi", "url": "https://github.com/fribidi/fribidi.git", "tool": "git", "branch": "master", "commit": "58895678b768ceaf8d8b3bc69f5c6f56c8e1513d", "freeze": false, "sm": false},
 {"dir": "leptonica", "url": "https://github.com/DanBloomberg/leptonica.git", "tool": "git", "branch": "master", "commit": "10bdea2f19240ffe8c931701b0b7340f41c6b256", "freeze": false, "sm": false},
 {"dir": "libjpeg", "url": "https://github.com/winlibs/libjpeg", "tool": "git", "branch": "master", "commit": "66ef88ad97f3c47eb1c7b85f2637ff1073ebce9b", "freeze": false, "sm": false},
 {"dir": "libpng", "url": "https://github.com/glennrp/libpng.git", "tool": "git", "branch": "master", "commit": "cae474558968f015124d7369556a4b1016276e3a", "freeze": false, "sm": false},
-{"dir": "libtiff", "url": "https://gitlab.com/libtiff/libtiff.git", "tool": "git", "branch": "master", "commit": "6fc0b31b9323f391c0ad72bb076934e0b2e805be", "freeze": false, "sm": false},
+{"dir": "libtiff", "url": "https://gitlab.com/libtiff/libtiff.git", "tool": "git", "branch": "master", "commit": "b99beace423ebb3d2040a2a61fe8c01bd857d854", "freeze": false, "sm": false},
 {"dir": "libultrahdr", "url": "https://gitgud.io/aosp/platform/external/libultrahdr.git", "tool": "git", "branch": "master", "commit": "72688e01fbb2dc98b7b19a98184760065a764c05", "freeze": false, "sm": false},
-{"dir": "libwebp", "url": "https://chromium.googlesource.com/webm/libwebp", "tool": "git", "branch": "main", "commit": "4fe551df7ecf3b30ff515397e2a1c4f54b8ee80c", "freeze": false, "sm": false},
+{"dir": "libwebp", "url": "https://chromium.googlesource.com/webm/libwebp", "tool": "git", "branch": "main", "commit": "73730abaee3595cf29a5e584f925b3da9bd525ba", "freeze": false, "sm": false},
 {"dir": "stb", "url": "https://github.com/nothings/stb.git", "tool": "git", "branch": "master", "commit": "2c980bb59875b0d32144a71867fbdebb2f77cd20", "freeze": false, "sm": false}
 ]
