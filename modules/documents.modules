@@ -1,4 +1,4 @@
 [
 {"dir": "libharu", "url": "https://github.com/libharu/libharu.git", "tool": "git", "branch": "master", "commit": "3467749fd1c0ab6ca6ed424d053b1ea53c1bf67c", "freeze": false, "sm": false},
-{"dir": "pdfio", "url": "https://github.com/michaelrsweet/pdfio", "tool": "git", "branch": "master", "commit": "85d2f7bb8df18aa01fb20445fa76ab5ed5f973ea", "freeze": false, "sm": false}
+{"dir": "pdfio", "url": "https://github.com/michaelrsweet/pdfio", "tool": "git", "branch": "master", "commit": "d4c68e1226aa2d47df8eca2315e1ae301882d2a0", "freeze": false, "sm": false}
 ]

@@ -1,6 +1,6 @@
 SUMMARY = "luv"
 LICENSE = "CLOSED"
-MODULE = "base/luv"
+MODULE = "interpreter/luv"
 SRCPV = "1"
 
 inherit simplecmake encapsulate

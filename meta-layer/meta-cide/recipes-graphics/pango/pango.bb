@@ -8,6 +8,7 @@ inherit simplemeson encapsulate
 python () {
     from bbdepend import BBDepend as BD
     BD.depends(d, " \
+        meson \
         glib  \
         cairo fontconfig freetype pixman  \
         fribidi harfbuzz \

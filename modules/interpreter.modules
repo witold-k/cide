@@ -1,2 +1,9 @@
 [
+{"dir": "libmpack-lua", "url": "https://github.com/libmpack/libmpack-lua.git", "tool": "git", "branch": "master", "commit": "950533192380485261dfc1be08f1edb2297787e7", "freeze": false, "sm": false},
+{"dir": "lpeg", "url": "https://github.com/LuaDist/lpeg", "tool": "git", "branch": "master", "commit": "baf0dc90b9278360be719dbfb8e56d34ce3c61bd", "freeze": false, "sm": false},
+{"dir": "lua", "url": "https://github.com/lua/lua", "tool": "git", "branch": "master", "commit": "b35736b9d71182bae67492af2a387b3f6e89fd05", "freeze": false, "sm": false},
+{"dir": "luabitop", "url": "https://github.com/LuaDist/luabitop", "tool": "git", "branch": "master", "commit": "81bb23b0e737805442033535de8e6d204d0e5381", "freeze": false, "sm": false},
+{"dir": "luafilesystem", "url": "https://github.com/lunarmodules/luafilesystem", "tool": "git", "branch": "master", "commit": "146ab458e821cd7617892099fe8e6e399b46185c", "freeze": false, "sm": false},
+{"dir": "luajit", "url": "https://luajit.org/git/luajit.git", "tool": "git", "branch": "v2.1", "commit": "2a8e017ef1ece6a95b983ffca073d30609dce7c4", "freeze": false, "sm": false},
+{"dir": "luv", "url": "https://github.com/luvit/luv.git", "tool": "git", "branch": "master", "commit": "26e62e49b0230891ece45a78cc1f63c074e60020", "freeze": false, "sm": false}
 ]

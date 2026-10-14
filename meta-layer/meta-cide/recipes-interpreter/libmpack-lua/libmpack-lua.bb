@@ -1,7 +1,9 @@
 SUMMARY = "libmpack-lua"
 LICENSE = "CLOSED"
-MODULE = "base/libmpack-lua"
+MODULE = "interpreter/libmpack-lua"
 SRCPV = "1"
+
+SKIP_BUILD = "True"
 
 inherit simplecmake encapsulate
 
@@ -20,7 +22,7 @@ python do_patch() {
 
     fileutils.copy_files(fd + '/files', s)
 
-    p = patcher.Patcher(s + '/lmpack.c', None)
-    p.replace('mpack-src', '../libmpack')
-    p.write()
+    # p = patcher.Patcher(s + '/lmpack.c', None)
+    # p.replace('mpack-src', '../libmpack')
+    # p.write()
 }

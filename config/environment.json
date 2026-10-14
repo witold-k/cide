@@ -1,6 +1,6 @@
 {
     "private": {
-        "NEXT_VERSION":          "v0.12",
+        "NEXT_VERSION":          "v0.13",
 
         "PROJECT_ROOT:DIR":      "..",
         "PROJECT_NAME":          "(default)",
@@ -24,19 +24,13 @@
         "COMPILER_2_DIR:DIR":    "/opt/compiler/${COMPILER_VERSION}",
         "COMPILER_2_GIT":        "svnuser@naspi:svn/crosstool-ng-release.git",
 
-        "BUILDSYSTEMS_VERSION":  "v0.12",
-        "BUILDSYSTEMS_ROOT:DIR": "/opt/buildsystems",
-        "BUILDSYSTEMS_DIR:DIR":  "/opt/buildsystems/${BUILDSYSTEMS_VERSION}",
-        "BUILDSYSTEMS_GIT":      "svnuser@naspi:svn/buildsystems-release.git",
-
         "CUDA_HOME:DIR":         "/usr/local/cuda-13.2",
-
-        "BITBAKE_ROOT:DIR":      "${BUILDSYSTEMS_DIR}/${BUILDSYSTEMS_VERSION}/native/opt/buildsystems/bitbake",
-        "BITBAKE_EXE:FILE":      "${BITBAKE_ROOT}/bin/bitbake",
-
         "DOCKER_IMAGE":          "crosstool-ng-buildsystem:1",
 
         "MODULES_DIR:DIR":       "${PROJECT_ROOT}/modules",
+
+        "BITBAKE_ROOT:DIR":      "${MODULES_DIR}/buildsystems/bitbake",
+        "BITBAKE_EXE:FILE":      "${BITBAKE_ROOT}/bin/bitbake",
 
         "MODULEREFS_JSON:DIR":   "${PROJECT_ROOT}/modulerefs/json",
         "BUILD_ROOT:DIR":        "${PROJECT_ROOT}/meta-layer/build",

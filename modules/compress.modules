@@ -1,7 +1,7 @@
 [
-{"dir": "brotli", "url": "https://github.com/google/brotli.git", "tool": "git", "branch": "master", "commit": "8e10eeb3378f6c459dbaf033ca6727e9816afccb", "freeze": false, "sm": false},
+{"dir": "brotli", "url": "https://github.com/google/brotli.git", "tool": "git", "branch": "master", "commit": "86ee1f65f62d6272345dee751d49e7d1f01c2b11", "freeze": false, "sm": false},
 {"dir": "bzip2", "url": "https://gitlab.com/bzip2/bzip2.git", "tool": "git", "branch": "master", "commit": "66c46b8c9436613fd81bc5d03f63a61933a4dcc3", "freeze": false, "sm": false},
 {"dir": "liblzma", "url": "https://github.com/ShiftMediaProject/liblzma.git", "tool": "git", "branch": "master", "commit": "e0923ebe73615bda8097bf68c510dedf8c120c0a", "freeze": false, "sm": false},
 {"dir": "zlib", "url": "https://github.com/madler/zlib.git", "tool": "git", "branch": "master", "commit": "da607da739fa6047df13e66a2af6b8bec7c2a498", "freeze": false, "sm": false},
-{"dir": "zstd", "url": "https://github.com/facebook/zstd.git", "tool": "git", "branch": "dev", "commit": "0716f554df4262cf8530e006bfcc3d9d71e4314e", "freeze": false, "sm": false}
+{"dir": "zstd", "url": "https://github.com/facebook/zstd.git", "tool": "git", "branch": "dev", "commit": "49cf51799ea051457f57243527aa2058f999f005", "freeze": false, "sm": false}
 ]

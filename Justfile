@@ -41,6 +41,7 @@ fetch:
 	@python3 {{python_exe}}/fetchercmd.py fetch \
 		{{current_dir}}/modules/audioformat \
 		{{current_dir}}/modules/base \
+		{{current_dir}}/modules/buildsystems \
 		{{current_dir}}/modules/compress \
 		{{current_dir}}/modules/crypt \
 		{{current_dir}}/modules/documents \
@@ -48,6 +49,7 @@ fetch:
 		{{current_dir}}/modules/graphics \
 		{{current_dir}}/modules/ide \
 		{{current_dir}}/modules/input \
+		{{current_dir}}/modules/interpreter \
 		{{current_dir}}/modules/llm \
 		{{current_dir}}/modules/math \
 		{{current_dir}}/modules/net \
@@ -61,6 +63,7 @@ save:
 	@python3 {{python_exe}}/fetchercmd.py save \
 		{{current_dir}}/modules/audioformat \
 		{{current_dir}}/modules/base \
+		{{current_dir}}/modules/buildsystems \
 		{{current_dir}}/modules/compress \
 		{{current_dir}}/modules/crypt \
 		{{current_dir}}/modules/documents \
@@ -68,6 +71,7 @@ save:
 		{{current_dir}}/modules/graphics \
 		{{current_dir}}/modules/ide \
 		{{current_dir}}/modules/input \
+		{{current_dir}}/modules/interpreter \
 		{{current_dir}}/modules/llm \
 		{{current_dir}}/modules/math \
 		{{current_dir}}/modules/net \
@@ -97,6 +101,7 @@ update: clean
 	@python3 {{python_exe}}/fetchercmd.py update \
 		{{current_dir}}/modules/audioformat \
 		{{current_dir}}/modules/base \
+		{{current_dir}}/modules/buildsystems \
 		{{current_dir}}/modules/compress \
 		{{current_dir}}/modules/crypt \
 		{{current_dir}}/modules/documents \
@@ -104,6 +109,7 @@ update: clean
 		{{current_dir}}/modules/graphics \
 		{{current_dir}}/modules/ide \
 		{{current_dir}}/modules/input \
+		{{current_dir}}/modules/interpreter \
 		{{current_dir}}/modules/llm \
 		{{current_dir}}/modules/math \
 		{{current_dir}}/modules/net \

@@ -10,7 +10,7 @@
         "exec_prefix": "${prefix}",
         "bindir": "${prefix}/bin",
         "libdir": "${prefix}/lib",
-        "includedir": "${prefix}/include/libpng"
+        "includedir": "${prefix}/include"
     },
 
     "build":  {

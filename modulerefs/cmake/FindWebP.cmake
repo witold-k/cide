@@ -1,5 +1,5 @@
 if (NOT LIBWEBP_FOUND)
-    set(LIBWEBP_INSTALL_BASE "${BB_TOP_DIR}/tmp/work/libjpeg${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}")
+    set(LIBWEBP_INSTALL_BASE "${BB_TOP_DIR}/tmp/work/libwebp${BB_TARGET_PREFIX}-1.0-r0/install/${BB_TARGET}")
     set(LIBWEBP_INSTALL      "${LIBWEBP_INSTALL_BASE}/${CMAKE_INSTALL_PREFIX}")
 
     set(LIBWEBP_LIBRARY      "${LIBWEBP_INSTALL}/lib/libwebp.a")

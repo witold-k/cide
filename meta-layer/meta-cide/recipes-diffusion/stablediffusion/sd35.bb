@@ -6,6 +6,7 @@ SRCPV = "1"
 inherit simplecmake encapsulate
 
 SKIP_CROSS = 'True'
+SKIP_BUILD = 'True'
 
 python () {
     from bbdepend import BBDepend as BD
@@ -61,14 +62,14 @@ CMAKE_EXE_LINKER_FLAGS = "${DEPEND_LIB_DIRS_SWITCH} -L${CUDA_HOME}/lib64 \
     -lcublasLt \
 "
 
-python do_patch() {
-    import patcher
-    s = d.getVar('S')
-
-    p = patcher.Patcher(s + '/ggml/src/ggml-cuda/CMakeLists.txt', None)
-    p.replace('ggml_get_flags(${CUDA_CCID} ${CUDA_CCVER})', 'ggml_get_flags(${CUDA_CCID} GGML_CUDA_FLAGS GGML_CUDA_DEFINES)')
-    p.write()
-}
+# python do_patch() {
+#     import patcher
+#     s = d.getVar('S')
+#
+#     p = patcher.Patcher(s + '/ggml/src/ggml-cuda/CMakeLists.txt', None)
+#     p.replace('ggml_get_flags(${CUDA_CCID} ${CUDA_CCVER})', 'ggml_get_flags(${CUDA_CCID} GGML_CUDA_FLAGS GGML_CUDA_DEFINES)')
+#     p.write()
+# }
 
 python do_install:prepend() {
     import os

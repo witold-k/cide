@@ -1,17 +1,18 @@
-SUMMARY = "luabitop"
+SUMMARY = "lpeg"
 LICENSE = "CLOSED"
-MODULE = "base/luabitop"
+MODULE = "interpreter/lpeg"
 SRCPV = "1"
 
 inherit simplecmake encapsulate
-
-SKIP_TEST = "True"
 
 python () {
     from bbdepend import BBDepend as BD
     BD.depends(d, "lua luajit")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
+
+CMAKE_C_FLAGS   = '-Wno-implicit-fallthrough'
+CMAKE_CXX_FLAGS = '-Wno-implicit-fallthrough'
 
 python do_patch() {
     import patcher
@@ -26,6 +27,10 @@ python do_patch() {
     p.write()
 }
 
-CMAKE_C_FLAGS = "\
-    -Wno-misleading-indentation \
-"
+python do_install:append() {
+    import fileutils
+    inst = d.getVar('INSTALL_DIR')
+    tpd  = d.getVar('TARGET_PREFIX_DIR')
+    lib  = inst + '/' + tpd + '/lib'
+    fileutils.rel_link(lib + '/lua/lpeg.so', lib + '/liblpeg.so')
+}

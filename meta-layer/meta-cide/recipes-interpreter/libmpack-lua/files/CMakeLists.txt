@@ -9,6 +9,10 @@ set(SRC lmpack.c)
 add_library(mpack SHARED ${SRC})
 target_include_directories(mpack PRIVATE ${LUA_INCLUDE_DIRS})
 target_link_libraries(mpack ${LUA_LIBRARIES})
+target_compile_definitions(mpack
+    PUBLIC
+    -DMPACK_USE_SYSTEM=1
+)
 set_target_properties(mpack PROPERTIES
   PREFIX ""
 )

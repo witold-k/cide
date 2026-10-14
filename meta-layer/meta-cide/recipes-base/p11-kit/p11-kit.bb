@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "libtasn1 libffi")
+    BD.depends(d, "meson libtasn1 libffi")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 

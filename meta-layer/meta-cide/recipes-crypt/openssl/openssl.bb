@@ -9,6 +9,8 @@ CONFIGURE_COMMAND = "Configure"
 CONFIGURE_IGNORE_HOST = "True"
 
 python do_configure:prepend() {
+    from mesonproperties import apply_meson_properties
+
     apply_meson_properties(d.getVar('TOOLCHAIN'), d)
 
     tp = d.getVar('TOOLCHAIN_PREFIX') or ''

@@ -1,3 +1,3 @@
 [
-{"dir": "stable-diffusion.cpp", "url": "https://github.com/leejet/stable-diffusion.cpp", "tool": "git", "branch": "master", "commit": "50d640568388f876b0d63ee6ddb6bc86d997ec64", "freeze": false, "sm": false}
+{"dir": "stable-diffusion.cpp", "url": "https://github.com/leejet/stable-diffusion.cpp", "tool": "git", "branch": "master", "commit": "1d0a58a35050d285b1d6fb1bc68a92924d35825e", "freeze": false, "sm": false}
 ]

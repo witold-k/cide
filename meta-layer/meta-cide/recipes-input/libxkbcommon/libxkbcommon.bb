@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "wayland wayland-protocols icu libncurses libreadline")
+    BD.depends(d, "meson wayland wayland-protocols icu libncurses libreadline libxml2")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 
@@ -21,6 +21,8 @@ MESON_OPTIONS = " \
     -Denable-x11=false \
     -Denable-parser-auto-generation=false \
 "
+
+# MESON_CXX_FLAGS = "${DEPEND_INCLUDE_DIRS_SWITCH}"
 MESON_LDFLAGS = "${LIB_FFI_FLAGS} ${DEPEND_LIB_DIRS_SWITCH}"
 
 NOWARN = "\
@@ -43,14 +45,15 @@ python do_patch:prepend() {
 
 python do_configure:prepend() {
     import os
+
     path = os.environ['PATH']
     wpath = d.getVar('WAYLAND_NATIVE_INSTALL_DIR') + '/bin'
     wppath = d.getVar('WAYLAND_PROTO_NATIVE_INSTALL_DIR') + '/bin'
     os.environ['PATH'] = path + ':' + wpath + ':' + wppath
-    os.environ['BISON'] = d.getVar('BUILDSYSTEMS_DIR') + '/wrapper/bin/bison'
+    os.environ['BISON'] = '/usr/bin/bison'
 }
 
 python do_compile:prepend() {
     import os
-    os.environ['BISON'] = d.getVar('BUILDSYSTEMS_DIR') + '/wrapper/bin/bison'
+    os.environ['BISON'] = '/usr/bin/bison'
 }

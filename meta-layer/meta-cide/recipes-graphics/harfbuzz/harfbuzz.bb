@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "cairo fontconfig freetype glib libffi pixman libexpat brotli zlib libpng libjpeg libxml2 liblzma bzip2")
+    BD.depends(d, "meson cairo fontconfig freetype glib libffi pixman libexpat brotli zlib libpng libjpeg libxml2 liblzma bzip2")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 

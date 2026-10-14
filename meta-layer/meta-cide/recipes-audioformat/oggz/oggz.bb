@@ -1,4 +1,4 @@
-UMMARY = "liboggz"
+SUMMARY = "liboggz"
 LICENSE = "CLOSED"
 MODULE = "audioformat/liboggz"
 SRCPV = "1"

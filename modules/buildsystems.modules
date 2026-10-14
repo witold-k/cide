@@ -1,0 +1,9 @@
+[
+{"dir": "bazel", "url": "https://github.com/bazelbuild/bazel.git", "tool": "git", "branch": "master", "commit": "a369be1fdb06b465ad272891c987b264659b0349", "freeze": false, "sm": false},
+{"dir": "bitbake", "url": "https://github.com/openembedded/bitbake.git", "tool": "git", "branch": "master", "commit": "a17e8093fd4d5ed7792df86af8d2d63803dc42a4", "freeze": false, "sm": false},
+{"dir": "cmake", "url": "https://gitlab.kitware.com/cmake/cmake.git", "tool": "git", "branch": "master", "commit": "5cc602c3fe06b528f02d5f988c516b8d6657f6a8", "freeze": false, "sm": false},
+{"dir": "conan", "url": "https://github.com/conan-io/conan", "tool": "git", "branch": "develop2", "commit": "0c571a58974edde8a8f104d24d949610597b61b8", "freeze": false, "sm": false},
+{"dir": "gn", "url": "https://gn.googlesource.com/gn", "tool": "git", "branch": "master", "commit": "0817afa577428da457b6482c027d7202cd01fcbf", "freeze": false, "sm": false},
+{"dir": "meson", "url": "https://github.com/mesonbuild/meson.git", "tool": "git", "branch": "master", "commit": "ee10b5385e94fc1a0adc0b1a7c518c78c94b4d23", "freeze": false, "sm": false},
+{"dir": "ninja", "url": "https://github.com/ninja-build/ninja.git", "tool": "git", "branch": "master", "commit": "1d8d3becbfa7ebedab908cdf025a6c8d09cc5ff6", "freeze": false, "sm": false}
+]

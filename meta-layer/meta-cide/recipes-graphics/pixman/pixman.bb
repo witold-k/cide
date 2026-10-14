@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "libpng zlib")
+    BD.depends(d, "meson libpng zlib")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 

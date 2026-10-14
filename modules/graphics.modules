@@ -1,15 +1,15 @@
 [
-{"dir": "OpenCL-Headers", "url": "https://github.com/KhronosGroup/OpenCL-Headers", "tool": "git", "branch": "main", "commit": "15b536b7fbe1098cea462a27db496b287ac89b63", "freeze": false, "sm": false},
-{"dir": "OpenCL-ICD-Loader", "url": "https://github.com/KhronosGroup/OpenCL-ICD-Loader.git", "tool": "git", "branch": "main", "commit": "45cdbda4ddd31c324e32a744f112087c42da18f7", "freeze": false, "sm": false},
+{"dir": "OpenCL-Headers", "url": "https://github.com/KhronosGroup/OpenCL-Headers", "tool": "git", "branch": "main", "commit": "30bc20a8e90468e231d7c639805ae61ad1fefa4f", "freeze": false, "sm": false},
+{"dir": "OpenCL-ICD-Loader", "url": "https://github.com/KhronosGroup/OpenCL-ICD-Loader.git", "tool": "git", "branch": "main", "commit": "5192c84f8059e5f703e5452929b613f9487f6e4c", "freeze": false, "sm": false},
 {"dir": "cairo", "url": "https://anongit.freedesktop.org/git/cairo.git", "tool": "git", "branch": "master", "commit": "bd04e43e201ef9beddcacdf379b610a0e199112e", "freeze": false, "sm": false},
 {"dir": "glfw", "url": "https://github.com/glfw/glfw.git", "tool": "git", "branch": "master", "commit": "92dcf4ce74f2e2554a98fea09be7c705c17daa5a", "freeze": false, "sm": false},
-{"dir": "harfbuzz", "url": "https://github.com/harfbuzz/harfbuzz.git", "tool": "git", "branch": "main", "commit": "64dab8571224d75090ed8768227cb89b19cffb2e", "freeze": false, "sm": false},
+{"dir": "harfbuzz", "url": "https://github.com/harfbuzz/harfbuzz.git", "tool": "git", "branch": "main", "commit": "9df939b153d88956a22dfb30a9868d1ffebf696f", "freeze": false, "sm": false},
 {"dir": "libglvnd", "url": "https://gitlab.freedesktop.org/glvnd/libglvnd.git", "tool": "git", "branch": "master", "commit": "c046a760d845416e98ac4128757b2b356c47fdaa", "freeze": false, "sm": false},
-{"dir": "librsvg", "url": "https://github.com/GNOME/librsvg", "tool": "git", "branch": "main", "commit": "94e1808e88e2bbdbfc265a845dc5ca48738972f0", "freeze": false, "sm": false},
-{"dir": "libvips", "url": "https://github.com/libvips/libvips.git", "tool": "git", "branch": "master", "commit": "527f4b9104c095e81e637d324048b197ba1a306e", "freeze": false, "sm": false},
-{"dir": "pango", "url": "https://gitlab.gnome.org/GNOME/pango.git", "tool": "git", "branch": "main", "commit": "0b96e86efec3706601d7dc02b21c9bf19817c9de", "freeze": false, "sm": false},
+{"dir": "librsvg", "url": "https://github.com/GNOME/librsvg", "tool": "git", "branch": "main", "commit": "9dd24204cc92fbdf1e7566968807e8812a27f292", "freeze": false, "sm": false},
+{"dir": "libvips", "url": "https://github.com/libvips/libvips.git", "tool": "git", "branch": "master", "commit": "06564b0a4c3f473d0e0cb9f9977ab647888aa43d", "freeze": false, "sm": false},
+{"dir": "pango", "url": "https://gitlab.gnome.org/GNOME/pango.git", "tool": "git", "branch": "main", "commit": "8e74c27c113c98664b77272d16b14bbce542c184", "freeze": false, "sm": false},
 {"dir": "pixman", "url": "https://anongit.freedesktop.org/git/pixman.git", "tool": "git", "branch": "master", "commit": "14735ced17e0053abbb925f9cf18c05ed9f52378", "freeze": false, "sm": false},
-{"dir": "wayland", "url": "https://gitlab.freedesktop.org/wayland/wayland.git", "tool": "git", "branch": "main", "commit": "28e08252c7dfd71ebc31a0c006d3dad05b0b4c68", "freeze": false, "sm": false},
-{"dir": "wayland-protocols", "url": "https://gitlab.freedesktop.org/wayland/wayland-protocols.git", "tool": "git", "branch": "main", "commit": "afb614d5fcbd02d261a6ae91920aa91cf3915a8a", "freeze": false, "sm": false},
+{"dir": "wayland", "url": "https://gitlab.freedesktop.org/wayland/wayland.git", "tool": "git", "branch": "main", "commit": "93c04ad3670633aea6f2435059378b75843b8e70", "freeze": false, "sm": false},
+{"dir": "wayland-protocols", "url": "https://gitlab.freedesktop.org/wayland/wayland-protocols.git", "tool": "git", "branch": "main", "commit": "35d9638cf0c3f0bbf0c42996580a284f3d8ce564", "freeze": false, "sm": false},
 {"dir": "xwrap", "url": "https://github.com/ishay320/XWrap.git", "tool": "git", "branch": "main", "commit": "016b8a8513d82c819d6aa82905009ed489130bb6", "freeze": false, "sm": false}
 ]

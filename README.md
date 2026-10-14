@@ -25,6 +25,8 @@ Making the complete build environment self-contained and reproducible is an impo
 
 The current state should therefore be considered **experimental**.
 
+# last verified local build: 2026-10-14
+
 ---
 
 ## Why CIDE?

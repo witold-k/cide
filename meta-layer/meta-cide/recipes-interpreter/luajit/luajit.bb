@@ -1,6 +1,6 @@
 SUMMARY = "luajit"
 LICENSE = "CLOSED"
-MODULE = "base/luajit"
+MODULE = "interpreter/luajit"
 SRCPV = "1"
 
 inherit simplemake encapsulate

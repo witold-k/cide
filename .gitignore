@@ -10,6 +10,7 @@ tmp
 tmp_release
 modules/audioformat
 modules/base
+modules/buildsystems
 modules/compress
 modules/crypt
 modules/diffusion
@@ -18,6 +19,7 @@ modules/graphicimage
 modules/graphics
 modules/ide
 modules/input
+modules/interpreter
 modules/llm
 modules/math
 modules/mediaserver

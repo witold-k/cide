@@ -7,10 +7,10 @@
 
     "vars": {
         "prefix": "${PREFIX}",
-        "exec_prefix": "${PREFIX}",
-        "bindir": "${PREFIX}/bin",
-        "libdir": "${PREFIX}/lib",
-        "includedir": "${PREFIX}/include"
+        "exec_prefix": "${prefix}",
+        "bindir": "${prefix}/bin",
+        "libdir": "${prefix}/lib",
+        "includedir": "${prefix}/include"
     },
 
     "build":  {

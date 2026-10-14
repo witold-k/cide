@@ -1,6 +1,6 @@
 SUMMARY = "lua"
 LICENSE = "CLOSED"
-MODULE = "base/lua"
+MODULE = "interpreter/lua"
 SRCPV = "1"
 
 inherit simplecmake encapsulate

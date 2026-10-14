@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "pcre2 zlib libffi")
+    BD.depends(d, "meson pcre2 zlib libffi")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 

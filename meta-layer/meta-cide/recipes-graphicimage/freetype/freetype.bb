@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "brotli zlib libpng libjpeg liblzma bzip2")
+    BD.depends(d, "meson brotli zlib libpng libjpeg liblzma bzip2")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 

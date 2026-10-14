@@ -7,7 +7,7 @@ inherit simplemeson encapsulate
 
 python () {
     from bbdepend import BBDepend as BD
-    BD.depends(d, "wayland libffi libxml2")
+    BD.depends(d, "meson wayland libffi libxml2")
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 
