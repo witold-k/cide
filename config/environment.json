@@ -1,6 +1,6 @@
 {
     "private": {
-        "NEXT_VERSION":          "v0.13",
+        "NEXT_VERSION":          "v0.14",
 
         "PROJECT_ROOT:DIR":      "..",
         "PROJECT_NAME":          "(default)",

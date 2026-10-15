@@ -25,7 +25,12 @@ Making the complete build environment self-contained and reproducible is an impo
 
 The current state should therefore be considered **experimental**.
 
-# last verified local build: 2026-10-14
+# last verified local build: 2026-10-15
+
+# next to do:
+
+- try to get lid of wrapper: do not use `/lib/ld-linux.so.2` as starter, try to link aganst `/opt/cide/../libc` ...
+- provide possiblie to use sytem compiler instead crosstool-ng
 
 ---
 

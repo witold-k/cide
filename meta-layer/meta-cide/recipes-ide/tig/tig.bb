@@ -11,6 +11,8 @@ python () {
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS}"
 
+CMAKE_OPTIONS = " -DTIG_SYSCONFDIR:PATH=/etc"
+
 CMAKE_C_FLAGS = "\
     -Wno-format-truncation \
     -Wno-int-conversion \
@@ -18,7 +20,6 @@ CMAKE_C_FLAGS = "\
     -Wno-sign-compare \
     -Wno-stringop-overflow \
     -Wno-unused-parameter \
-    -DSYSCONFDIR=\\\"/etc\\\" \
 "
 
 python do_patch() {

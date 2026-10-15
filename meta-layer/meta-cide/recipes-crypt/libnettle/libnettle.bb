@@ -22,6 +22,9 @@ CONFIGURE_CFLAGS   = ""
 CONFIGURE_CXXFLAGS = ""
 CONFIGURE_LDFLAGS  = "${DEPEND_LIB_DIRS_SWITCH}"
 
+TEXINDEX_AWK = "/usr/bin/gawk"
+export TEXINDEX_AWK
+
 python do_install:append() {
     import fileutils
 

@@ -81,7 +81,10 @@ target_include_directories(tig-bin PRIVATE
     include .
     ${CURSES_INCLUDE_DIR}/ncursesw
 )
-target_compile_definitions(tig-bin PRIVATE HAVE_NCURSES_H)
+target_compile_definitions(tig-bin PRIVATE
+    HAVE_NCURSES_H
+    SYSCONFDIR="${TIG_SYSCONFDIR}"
+)
 install(TARGETS tig-bin DESTINATION bin)
 set_target_properties(tig-bin PROPERTIES OUTPUT_NAME tig)
 

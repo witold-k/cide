@@ -24,17 +24,17 @@ MESON_LDFLAGS = "${DEPEND_LIB_DIRS_SWITCH} ${TARGET_LIB_DIR_FLAGS} ${LIB_FFI_FLA
 
 LIBRARY_PATH = "${DEPEND_LIB_PATH} -L${BUILDSYSTEMS_DIR}/lib"
 
-MESON_PROGRAM_PATH = "${BUILDSYSTEMS_DIR}/bin"
+# MESON_PROGRAM_PATH = "${BUILDSYSTEMS_DIR}/bin"
 
 # is not used, be kept here as a reminder
 # is accessed by glib-compile-resources, but environment
 # in this binary does not contain the XMLLINT
 MESON_ENV = " \
-XMLLINT=${BUILDSYSTEMS_DIR}/bin/xmllint \
+XMLLINT=/usr/bin/xmllint \
 "
 
 MESON_OPTIONS = " \
--Dxmllint_path=${BUILDSYSTEMS_DIR}/bin/xmllint \
+-Dxmllint_path=/usr/bin/xmllint \
 "
 
 python do_patch() {

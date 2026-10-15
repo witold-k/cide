@@ -26,7 +26,7 @@ DEPEND_LIST = "\
 "
 python () {
     from bbdepend import BBDepend as BD
-    BD.native_depends(d, 'neovim')
+    BD.native_depends(d, 'neovim ' + d.getVar('DEPEND_LIST'))
     BD.depends(d, d.getVar('DEPEND_LIST'))
 }
 do_check_need_build[depends] += "${DEPEND_TARGETS} ${NATIVE_DEPEND_TARGETS}"
@@ -165,13 +165,23 @@ do_configure:prepend() {
 }
 
 python do_compile:prepend() {
-    import fileutils, os
-    s = d.getVar('S')
+    import os
+    from bbdepend import BBDepend
+
     ld = d.getVar('LIB_LPEG_DIR')
     md = d.getVar('LIB_MPACK_DIR')
     os.environ['LUA_CPATH'] = ld + '/lua/?.so;' + md + '/?.so'
     path = os.environ['PATH']
     os.environ['PATH'] = d.getVar('NATIVE_NVIM_BASE') + ':' + path
+
+    if d.getVar('CURRENT_TARGET') == d.getVar('NATIVE_TARGET'):
+        native_lib_path = BBDepend.createAll(d, d.getVar('DEPEND_LIST')).libPath
+    else:
+        native_lib_path = d.getVar('NATIVE_DEPEND_LIB_PATH')
+    if native_lib_path:
+        existing = d.getVar('TOOLCHAIN_LD_LIBRARY_PATH') or ''
+        d.setVar('TOOLCHAIN_LD_LIBRARY_PATH',
+                 native_lib_path + (':' + existing if existing else ''))
 }
 
 python do_install:append() {
