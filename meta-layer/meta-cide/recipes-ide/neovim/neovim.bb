@@ -184,13 +184,3 @@ python do_compile:prepend() {
                  native_lib_path + (':' + existing if existing else ''))
 }
 
-python do_install:append() {
-    import fileutils
-    s = d.getVar('S')
-    rootfs = d.getVar('IMAGE_ROOTFS')
-    sf = s + '/runtime/lua/vim/lsp/log.lua'
-    df = rootfs + '/share/nvim/runtime/lua/vim/lsp/log.lua'
-    bb.warn("CP " + sf + " => " + df)
-    fileutils.copy_file(sf, df)
-}
-
