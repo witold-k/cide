@@ -6,7 +6,6 @@ SRCPV = "1"
 inherit simplecmake encapsulate
 
 SKIP_CROSS = 'True'
-SKIP_BUILD = 'True'
 
 python () {
     from bbdepend import BBDepend as BD
